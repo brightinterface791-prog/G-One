@@ -102,45 +102,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
           flexShrink: 0,
         }}
       >
-        <Box
-          sx={{
-            width: 56,
-            height: 56,
-            borderRadius: '16px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'hidden',
-          }}
-        >
-          <img src="/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-        </Box>
-        <Box>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              fontWeight: 900,
-              color: '#0f172a',
-              lineHeight: 1.1,
-              letterSpacing: '-0.02em',
-              fontSize: { xs: '0.95rem', sm: '1.05rem' },
-            }}
-          >
-            {currentUser.hospitalName || 'G-ONE HEALTH'}
-          </Typography>
-          <Typography
-            variant="caption"
-            sx={{
-              color: THEME_COLOR,
-              fontWeight: 800,
-              fontSize: '0.68rem',
-              letterSpacing: '0.06em',
-              display: 'block',
-            }}
-          >
-            HOSPITAL ADMIN PANEL
-          </Typography>
-        </Box>
+        <Box component="img" src="/logo.png" alt="G-One — Smarter Appointments, Better Patient Care" sx={{ width: { xs: 145, sm: 205 }, height: 58, objectFit: 'contain', objectPosition: 'left center' }} />
       </Box>
 
       {/* Center: Search Bar */}
