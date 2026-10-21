@@ -157,7 +157,7 @@ let theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 12,
+    borderRadius: 8,
   },
   components: {
     MuiCssBaseline: {
@@ -481,7 +481,7 @@ let theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 18,
+          borderRadius: 8,
           backgroundColor: '#ffffff',
           boxShadow: '0 6px 24px rgba(64, 28, 28, 0.045)',
           border: '1px solid #f0e4e2',
@@ -492,6 +492,7 @@ let theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
+          borderRadius: 8,
           backgroundImage: 'none',
         },
       },
