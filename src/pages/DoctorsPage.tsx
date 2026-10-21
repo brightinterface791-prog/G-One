@@ -323,9 +323,10 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
             backgroundColor: '#ffffff',
           }}
         >
-          <Grid container spacing={2} sx={{ alignItems: 'center' }}>
+          <Grid container spacing={2} sx={{ alignItems: 'end' }}>
             {/* Search Input */}
             <Grid size={{ xs: 12, md: 5 }}>
+              <Typography component="label" sx={{ display: 'block', height: 20, mb: 0.75, fontSize: 13, fontWeight: 500, color: 'transparent' }} aria-hidden="true">Search</Typography>
               <TextField
                 fullWidth
                 size="small"
@@ -341,20 +342,17 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                     ),
                   },
                 }}
-                sx={{
-                  borderRadius: 2,
-                }}
+                sx={{ '& .MuiOutlinedInput-root': { height: 46, borderRadius: 2, boxShadow: 'none', '& fieldset': { borderWidth: '1px !important', borderColor: '#e2e8f0' }, '&:hover fieldset': { borderColor: '#94a3b8' }, '&.Mui-focused fieldset': { borderColor: '#64748b' } } }}
               />
             </Grid>
 
             {/* Specialty Dropdown */}
             <Grid size={{ xs: 12, sm: 6, md: 3.5 }}>
-              <FormControl fullWidth size="small">
-                <InputLabel id="specialty-filter-label">Specialty</InputLabel>
+              <Typography component="label" htmlFor="specialty-filter" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#64748b' }}>Specialty</Typography>
+              <FormControl fullWidth size="small" sx={{ '& .MuiOutlinedInput-root': { height: 46, borderRadius: 2, boxShadow: 'none', '& fieldset': { borderWidth: '1px !important', borderColor: '#e2e8f0' }, '&:hover fieldset': { borderColor: '#94a3b8' }, '&.Mui-focused fieldset': { borderColor: '#64748b' } } }}>
                 <Select
-                  labelId="specialty-filter-label"
+                  id="specialty-filter"
                   value={selectedSpecialty}
-                  label="Specialty"
                   onChange={(e) => onSelectSpecialty(e.target.value)}
                 >
                   <MenuItem value="All">All Specialties ({doctors.length} Doctors)</MenuItem>
@@ -369,12 +367,11 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
 
             {/* Sort Options */}
             <Grid size={{ xs: 12, sm: 6, md: 3.5 }}>
-              <FormControl fullWidth size="small">
-                <InputLabel id="sort-filter-label">Sort By</InputLabel>
+              <Typography component="label" htmlFor="sort-filter" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#64748b' }}>Sort By</Typography>
+              <FormControl fullWidth size="small" sx={{ '& .MuiOutlinedInput-root': { height: 46, borderRadius: 2, boxShadow: 'none', '& fieldset': { borderWidth: '1px !important', borderColor: '#e2e8f0' }, '&:hover fieldset': { borderColor: '#94a3b8' }, '&.Mui-focused fieldset': { borderColor: '#64748b' } } }}>
                 <Select
-                  labelId="sort-filter-label"
+                  id="sort-filter"
                   value={sortBy}
-                  label="Sort By"
                   onChange={(e) => setSortBy(e.target.value as any)}
                 >
                   <MenuItem value="rating">Highest Rated (★ 4.9+)</MenuItem>
