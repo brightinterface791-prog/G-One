@@ -3,8 +3,8 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 // Theme Primary color specified by user: #b70302
 export const THEME_COLOR = '#b70302';
 
-const FONT_DISPLAY = '"SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
-const FONT_TEXT = '"SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+const FONT_DISPLAY = '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+const FONT_TEXT = '"Inter", "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
 
 let theme = createTheme({
   palette: {
@@ -42,15 +42,15 @@ let theme = createTheme({
       dark: '#15803d',
     },
     background: {
-      default: '#f8fafc',
+      default: '#faf7f6',
       paper: '#ffffff',
     },
     text: {
-      primary: '#0f172a',
-      secondary: '#475569',
+      primary: '#262123',
+      secondary: '#756d70',
       disabled: '#94a3b8',
     },
-    divider: '#e2e8f0',
+    divider: '#f0e4e2',
   },
   typography: {
     fontFamily: FONT_TEXT,
@@ -157,7 +157,7 @@ let theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 8,
+    borderRadius: 12,
   },
   components: {
     MuiCssBaseline: {
