@@ -37,27 +37,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onNavigate }) => 
               onClick={() => onNavigate('home')}
               sx={{ display: 'flex', alignItems: 'center', mb: 2, cursor: 'pointer' }}
             >
-              <Box
-                sx={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 2,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mr: 1.5,
-                  overflow: 'hidden',
-                }}
-              >
-                <img src="/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </Box>
-              <Box>
-                <Typography variant="h6" sx={{ fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em' }}>
-                  G-ONE HEALTH CARE
-                </Typography>
-                <Typography variant="caption" sx={{ color: '#94a3b8', display: 'block' }}>
-                  Excellence in Medical Practice & Patient Wellness
-                </Typography>
+              <Box sx={{ backgroundColor: '#ffffff', borderRadius: 2, px: 1.5, py: 1, display: 'flex', alignItems: 'center' }}>
+                <Box component="img" src="/logo.png" alt="G-One — Smarter Appointments, Better Patient Care" sx={{ width: { xs: 185, sm: 230 }, height: 'auto', maxHeight: 92, objectFit: 'contain' }} />
               </Box>
             </Box>
             <Typography variant="body2" sx={{ color: '#94a3b8', mb: 2.5, lineHeight: 1.7 }}>
