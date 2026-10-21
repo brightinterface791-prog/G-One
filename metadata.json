@@ -1,0 +1,6 @@
+{
+  "name": "G-One Health Care",
+  "description": "Hospital and clinic dynamic management SaaS portal with doctor-wise scheduling, sitting timings, specialties administration, and customizable appointment intake forms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
