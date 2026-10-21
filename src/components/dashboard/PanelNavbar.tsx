@@ -11,7 +11,6 @@ import {
   MonitorHeart,
   MedicalServices,
   LocalFireDepartment,
-  Public,
   DynamicForm,
 } from '@mui/icons-material';
 import { THEME_COLOR } from '../../theme/theme';
@@ -65,12 +64,6 @@ export const PanelNavbar: React.FC<PanelNavbarProps> = ({
       icon: <LocalFireDepartment sx={{ fontSize: 18 }} />,
       badge: 'URGENT',
       badgeColor: '#dc2626',
-    },
-    {
-      id: 'home',
-      label: 'Public Website View',
-      icon: <Public sx={{ fontSize: 18 }} />,
-      isExternal: true,
     },
   ];
 
