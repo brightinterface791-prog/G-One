@@ -133,3 +133,41 @@
     color: var(--theme-color) !important;
   }
 }
+
+
+/* Consistent neutral input states for native fields and MUI form controls.
+   Keep validation errors red; ordinary typing/hover never uses brand red. */
+@layer components {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(.MuiInputBase-input),
+  select:not(.MuiSelect-select),
+  textarea:not(.MuiInputBase-input) {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(.MuiInputBase-input):hover:not(:disabled),
+  select:not(.MuiSelect-select):hover:not(:disabled),
+  textarea:not(.MuiInputBase-input):hover:not(:disabled) {
+    border-color: #94a3b8;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(.MuiInputBase-input):focus-visible,
+  select:not(.MuiSelect-select):focus-visible,
+  textarea:not(.MuiInputBase-input):focus-visible {
+    outline: none;
+    border-color: #64748b;
+    box-shadow: 0 0 0 4px rgba(100, 116, 139, 0.10);
+  }
+
+  .MuiOutlinedInput-root:hover:not(.Mui-error) .MuiOutlinedInput-notchedOutline {
+    border-color: #94a3b8 !important;
+  }
+  .MuiOutlinedInput-root.Mui-focused:not(.Mui-error) .MuiOutlinedInput-notchedOutline {
+    border-color: #64748b !important;
+  }
+  .MuiInputLabel-root.Mui-focused:not(.Mui-error) {
+    color: #475569 !important;
+  }
+}
