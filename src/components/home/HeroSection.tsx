@@ -50,24 +50,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     <Box
       id="hero-section"
       sx={{
-        backgroundColor: '#ffffff',
+        backgroundColor: '#fffaf9',
         pt: { xs: 4, md: 8 },
         pb: { xs: 6, md: 10 },
         position: 'relative',
         overflow: 'hidden',
-        borderBottom: '1px solid #e2e8f0',
+        borderBottom: 'none',
       }}
     >
       {/* Subtle background decorative shapes */}
       <Box
         sx={{
           position: 'absolute',
-          top: -100,
+          top: -110,
           right: -100,
-          width: 400,
-          height: 400,
+          width: 580,
+          height: 580,
           borderRadius: '50%',
-          backgroundColor: 'rgba(183, 3, 2, 0.03)',
+          backgroundColor: 'rgba(183, 3, 2, 0.075)',
           pointerEvents: 'none',
         }}
       />
