@@ -113,51 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               },
             }}
           >
-            <Box
-              sx={{
-                width: 56,
-                height: 56,
-                borderRadius: '16px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                mr: 1.5,
-                flexShrink: 0,
-                overflow: 'hidden',
-              }}
-            >
-              <img src="/logo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </Box>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontWeight: 800,
-                  letterSpacing: '-0.03em',
-                  color: '#0f172a',
-                  lineHeight: 1,
-                  fontSize: { xs: '1.25rem', sm: '1.45rem' },
-                }}
-              >
-                G-ONE
-              </Typography>
-              <Box
-                sx={{
-                  px: 1,
-                  py: 0.2,
-                  borderRadius: '6px',
-                  backgroundColor: 'rgba(183, 3, 2, 0.08)',
-                  border: '1px solid rgba(183, 3, 2, 0.15)',
-                  color: THEME_COLOR,
-                  fontSize: '0.65rem',
-                  fontWeight: 800,
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
-                }}
-              >
-                HEALTH CARE
-              </Box>
-            </Box>
+            <Box component="img" src="/logo.png" alt="G-One — Smarter Appointments, Better Patient Care" sx={{ width: { xs: 154, sm: 210, md: 225 }, height: { xs: 49, md: 61 }, objectFit: 'contain', objectPosition: 'left center', display: 'block' }} />
           </Box>
 
           {/* Desktop Navigation & Actions in Single Row */}
@@ -330,25 +286,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.2 }}>
-            <Box
-              sx={{
-                width: 36,
-                height: 36,
-                borderRadius: '10px',
-                backgroundColor: THEME_COLOR,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff',
-              }}
-            >
-              <LocalHospital sx={{ fontSize: 22 }} />
-            </Box>
-            <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#0f172a' }}>
-              G-ONE HEALTH
-            </Typography>
-          </Box>
+          <Box component="img" src="/logo.png" alt="G-One" sx={{ width: 170, maxHeight: 58, objectFit: 'contain', objectPosition: 'left center' }} />
           <IconButton onClick={handleDrawerToggle} aria-label="Close menu" size="small">
             <CloseIcon />
           </IconButton>
