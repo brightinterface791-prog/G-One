@@ -381,9 +381,11 @@ export default function App() {
           flexDirection: 'column',
           backgroundColor: currentPage === 'home' ? '#fffaf9' : '#faf7f6',
           // One continuous decorative circle behind BOTH the navbar and hero.
-          backgroundImage: currentPage === 'home' ? 'radial-gradient(circle, rgba(183, 3, 2, 0.075) 0 99.8%, transparent 100%)' : 'none',
-          backgroundSize: '580px 580px',
-          backgroundPosition: 'right -100px top -110px',
+          // Fixed-radius circle centered 100px outside the right edge, 180px below the top.
+          // A single radial gradient spans the header and hero without any clipping seam.
+          backgroundImage: currentPage === 'home'
+            ? 'radial-gradient(circle 290px at calc(100% + 100px) 180px, rgba(183, 3, 2, 0.075) 0 99.8%, transparent 100%)'
+            : 'none',
           backgroundRepeat: 'no-repeat',
         }}>
           <Navbar
