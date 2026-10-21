@@ -87,13 +87,9 @@ export const Navbar: React.FC<NavbarProps> = ({
       position="sticky"
       elevation={0}
       sx={{
-        backgroundColor: '#fffaf9',
-        // Continue the hero's pale-red circle into the header while at the top.
-        // Match the hero's 580px circle: right -100px, center 180px below hero top.
-        // This aligns the arc at the header/hero boundary without a visible seam.
-        backgroundImage: currentPage === 'home' && !isScrolled
-          ? 'radial-gradient(circle 290px at calc(100% - 100px) calc(100% + 180px), rgba(183, 3, 2, 0.075) 0 99.8%, transparent 100%)'
-          : 'none',
+        backgroundColor: currentPage === 'home' && !isScrolled ? 'transparent' : '#fffaf9',
+        // The circle is drawn once by the shared page wrapper, not separately here.
+        backgroundImage: 'none',
         backdropFilter: 'none',
         color: '#0f172a',
         borderBottom: 'none',
