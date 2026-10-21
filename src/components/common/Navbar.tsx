@@ -79,10 +79,11 @@ export const Navbar: React.FC<NavbarProps> = ({
       position="sticky"
       elevation={0}
       sx={{
-        backgroundColor: 'rgba(255, 255, 255, 0.98)',
-        backdropFilter: 'blur(16px)',
+        backgroundColor: '#ffffff',
+        backdropFilter: 'none',
         color: '#0f172a',
-        borderBottom: '1px solid #e2e8f0',
+        borderBottom: 'none',
+        boxShadow: 'none',
         zIndex: 1100,
       }}
     >
