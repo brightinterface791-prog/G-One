@@ -12,51 +12,45 @@
 
   html, body {
     font-family: var(--font-sf-text);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.55;
+    line-height: 1.5;
     color: #0f172a;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #faf7f6;
   }
 
-  /* Large heading: SF Pro Display, 48–64px, 600 */
-  h1, .text-large-heading, .heading-large {
+  /* Let Tailwind utility classes and MUI variants control heading sizes.
+     Avoid broad !important rules that make every dashboard title oversized. */
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sf-display);
-    font-size: clamp(48px, 5vw, 64px) !important;
-    font-weight: 600 !important;
+    letter-spacing: -0.015em;
+  }
+
+  .text-large-heading, .heading-large {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
     line-height: 1.15;
-    letter-spacing: -0.025em;
   }
-
-  /* Section heading: 32–40px, 600 */
-  h2, h3, .text-section-heading, .heading-section {
-    font-family: var(--font-sf-display);
-    font-size: clamp(32px, 3.5vw, 40px) !important;
-    font-weight: 600 !important;
+  .text-section-heading, .heading-section {
+    font-size: clamp(24px, 2.5vw, 32px);
+    font-weight: 600;
     line-height: 1.25;
-    letter-spacing: -0.02em;
   }
-
-  /* Subheading: 20–24px, 500 */
-  h4, h5, h6, .text-subheading, .heading-sub {
-    font-family: var(--font-sf-display);
-    font-size: clamp(20px, 2.2vw, 24px) !important;
-    font-weight: 500 !important;
+  .text-subheading, .heading-sub {
+    font-size: 18px;
+    font-weight: 500;
     line-height: 1.35;
-    letter-spacing: -0.01em;
   }
-
-  /* Body: 16–18px, 400 */
-  p, .text-body, .body-regular {
+  .text-body, .body-regular {
     font-family: var(--font-sf-text);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.55;
+    line-height: 1.5;
   }
 
-  /* Universal Input text: 16px, 400 */
+  /* Universal Input text */
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -70,7 +64,7 @@
   .MuiInputBase-input,
   .MuiOutlinedInput-input {
     font-family: var(--font-sf-text) !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-weight: 400 !important;
     color: #0f172a !important;
   }
@@ -81,7 +75,7 @@
   .MuiInputBase-input::placeholder,
   .MuiOutlinedInput-input::placeholder {
     font-family: var(--font-sf-text) !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-weight: 400 !important;
     color: #94a3b8 !important;
     opacity: 1 !important;
@@ -91,13 +85,13 @@
   button,
   .MuiButton-root {
     font-family: var(--font-sf-display) !important;
-    font-size: 16px !important;
+    font-size: 14px;
     font-weight: 500 !important;
     letter-spacing: -0.01em;
   }
 
   .MuiButton-sizeLarge {
-    font-size: 17px !important;
+    font-size: 15px !important;
   }
 
   /* Small / Helper text: 13–14px */
@@ -115,7 +109,7 @@
   /* Radio & Checkbox Label: 16px, 400 */
   .MuiFormControlLabel-label {
     font-family: var(--font-sf-text) !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-weight: 400 !important;
     color: #1e293b !important;
   }
@@ -123,7 +117,7 @@
   /* Select dropdown items: 16px, 400 */
   .MuiMenuItem-root {
     font-family: var(--font-sf-text) !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-weight: 400 !important;
   }
 
