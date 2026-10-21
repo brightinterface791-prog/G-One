@@ -67,7 +67,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
       sx={{
         py: { xs: 5, md: 7 },
         backgroundColor: '#ffffff',
-        borderBottom: '1px solid #e2e8f0',
+        borderBottom: 'none',
       }}
     >
       <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 4, lg: 5 } }}>
