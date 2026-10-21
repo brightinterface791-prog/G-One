@@ -375,7 +375,17 @@ export default function App() {
         </DashboardLayout>
       ) : (
         /* Public Non-Logged In State */
-        <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#f8fafc' }}>
+        <Box sx={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          backgroundColor: currentPage === 'home' ? '#fffaf9' : '#faf7f6',
+          // One continuous decorative circle behind BOTH the navbar and hero.
+          backgroundImage: currentPage === 'home' ? 'radial-gradient(circle, rgba(183, 3, 2, 0.075) 0 99.8%, transparent 100%)' : 'none',
+          backgroundSize: '580px 580px',
+          backgroundPosition: 'right -100px top -110px',
+          backgroundRepeat: 'no-repeat',
+        }}>
           <Navbar
             currentPage={currentPage}
             onNavigate={handleNavigate}
