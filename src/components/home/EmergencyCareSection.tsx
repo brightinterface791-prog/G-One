@@ -25,9 +25,9 @@ export const EmergencyCareSection: React.FC<EmergencyCareSectionProps> = ({ onOp
       id="emergency-section"
       sx={{
         py: { xs: 6, md: 8 },
-        backgroundColor: '#fef2f2',
-        borderTop: '1px solid #fee2e2',
-        borderBottom: '1px solid #fee2e2',
+        backgroundColor: '#fff7f7',
+        borderTop: 'none',
+        borderBottom: 'none',
       }}
     >
       <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 4, lg: 5 } }}>
