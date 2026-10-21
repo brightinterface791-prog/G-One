@@ -57,7 +57,7 @@ let theme = createTheme({
     // Large heading: SF Pro Display, 48–64px, 600
     h1: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '52px',
+      fontSize: '42px',
       fontWeight: 600,
       lineHeight: 1.15,
       letterSpacing: '-0.025em',
@@ -66,7 +66,7 @@ let theme = createTheme({
     // Section heading: 32–40px, 600
     h2: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '36px',
+      fontSize: '30px',
       fontWeight: 600,
       lineHeight: 1.25,
       letterSpacing: '-0.02em',
@@ -74,7 +74,7 @@ let theme = createTheme({
     },
     h3: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '32px',
+      fontSize: '26px',
       fontWeight: 600,
       lineHeight: 1.25,
       letterSpacing: '-0.015em',
@@ -83,7 +83,7 @@ let theme = createTheme({
     // Subheading: 20–24px, 500
     h4: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '24px',
+      fontSize: '15px',
       fontWeight: 500,
       lineHeight: 1.35,
       letterSpacing: '-0.01em',
@@ -91,28 +91,28 @@ let theme = createTheme({
     },
     h5: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '22px',
+      fontSize: '19px',
       fontWeight: 500,
       lineHeight: 1.4,
       color: '#0f172a',
     },
     h6: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '20px',
+      fontSize: '15px',
       fontWeight: 500,
       lineHeight: 1.4,
       color: '#0f172a',
     },
     subtitle1: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '21px',
+      fontSize: '15px',
       fontWeight: 500,
       lineHeight: 1.45,
       color: '#334155',
     },
     subtitle2: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '20px',
+      fontSize: '15px',
       fontWeight: 500,
       lineHeight: 1.45,
       color: '#334155',
@@ -120,14 +120,14 @@ let theme = createTheme({
     // Body: 16–18px, 400
     body1: {
       fontFamily: FONT_TEXT,
-      fontSize: '17px',
+      fontSize: '15px',
       fontWeight: 400,
       lineHeight: 1.6,
       color: '#334155',
     },
     body2: {
       fontFamily: FONT_TEXT,
-      fontSize: '16px',
+      fontSize: '14px',
       fontWeight: 400,
       lineHeight: 1.55,
       color: '#475569',
@@ -135,7 +135,7 @@ let theme = createTheme({
     // Button: 16–17px, 500
     button: {
       fontFamily: FONT_DISPLAY,
-      fontSize: '16.5px',
+      fontSize: '14px',
       fontWeight: 500,
       textTransform: 'none',
       letterSpacing: '-0.01em',
