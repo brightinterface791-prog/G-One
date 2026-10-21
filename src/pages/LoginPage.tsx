@@ -303,26 +303,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
           <Box sx={{ maxWidth: 420, width: '100%', mx: 'auto' }}>
             {/* Brand Logo - Centered */}
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 2.5 }}>
-              <Box
-                sx={{
-                  width: 46,
-                  height: 46,
-                  borderRadius: '12px',
-                  backgroundColor: THEME_COLOR,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#ffffff',
-                  mb: 1.5,
-                }}
-              >
-                <Box
-                  component="img"
-                  src="/logo.png"
-                  alt="Logo"
-                  sx={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                />
-              </Box>
+              <Box component="img" src="/logo.png" alt="G-One — Smarter Appointments, Better Patient Care" sx={{ width: { xs: 210, sm: 260 }, height: 'auto', maxHeight: 100, objectFit: 'contain', mb: 1.5 }} />
               
               {/* Centered Sign In Title */}
               <Typography
