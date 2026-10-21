@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -38,6 +38,14 @@ export const Navbar: React.FC<NavbarProps> = ({
   user,
 }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 8);
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => window.removeEventListener('scroll', updateScrollState);
+  }, []);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -83,7 +91,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         backdropFilter: 'none',
         color: '#0f172a',
         borderBottom: 'none',
-        boxShadow: 'none',
+        boxShadow: isScrolled ? '0 5px 22px rgba(15, 23, 42, 0.12)' : 'none',
+        transition: 'box-shadow 220ms ease',
         zIndex: 1100,
       }}
     >
