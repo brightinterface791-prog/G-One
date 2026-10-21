@@ -51,8 +51,8 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
       id="senior-specialists-section"
       sx={{
         py: { xs: 6, md: 8 },
-        backgroundColor: '#f8fafc',
-        borderBottom: '1px solid #e2e8f0',
+        backgroundColor: '#f7f5f4',
+        borderBottom: 'none',
       }}
     >
       <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 4, lg: 5 } }}>
