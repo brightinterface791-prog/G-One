@@ -287,14 +287,14 @@ let theme = createTheme({
             borderWidth: '1px',
           },
           '&:hover fieldset': {
-            borderColor: '#c9abaa',
+            borderColor: '#94a3b8',
           },
           '&.Mui-focused fieldset': {
-            borderColor: THEME_COLOR,
+            borderColor: '#64748b',
             borderWidth: '1.5px',
           },
           '&.Mui-focused': {
-            boxShadow: '0 0 0 4px rgba(183, 3, 2, 0.08)',
+            boxShadow: '0 0 0 4px rgba(100, 116, 139, 0.10)',
           },
           '&.Mui-error fieldset': {
             borderColor: '#dc2626',
@@ -346,7 +346,7 @@ let theme = createTheme({
           whiteSpace: 'normal',
           overflowWrap: 'anywhere',
           color: '#51484a',
-          '&.Mui-focused': { color: THEME_COLOR },
+          '&.Mui-focused': { color: '#475569' },
           '&.Mui-error': { color: '#dc2626' },
         },
         shrink: {
