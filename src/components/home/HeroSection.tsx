@@ -50,7 +50,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     <Box
       id="hero-section"
       sx={{
-        backgroundColor: '#fffaf9',
+        backgroundColor: 'transparent',
         pt: { xs: 4, md: 8 },
         pb: { xs: 6, md: 10 },
         position: 'relative',
@@ -58,20 +58,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         borderBottom: 'none',
       }}
     >
-      {/* Subtle background decorative shapes */}
-      <Box
-        sx={{
-          position: 'absolute',
-          top: -110,
-          right: -100,
-          width: 580,
-          height: 580,
-          borderRadius: '50%',
-          backgroundColor: 'rgba(183, 3, 2, 0.075)',
-          pointerEvents: 'none',
-        }}
-      />
-
       <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 4, lg: 5 } }}>
         <Grid container spacing={{ xs: 4, md: 6 }} sx={{ alignItems: 'center' }}>
           {/* Left Column: Hero Copy & Actions */}
