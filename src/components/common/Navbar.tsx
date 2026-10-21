@@ -87,11 +87,11 @@ export const Navbar: React.FC<NavbarProps> = ({
       position="sticky"
       elevation={0}
       sx={{
-        backgroundColor: '#ffffff',
+        backgroundColor: '#fffaf9',
         // Continue the hero's pale-red circle into the header while at the top.
         // The hero circle is 400px wide, right: -100px, top: -100px.
         backgroundImage: currentPage === 'home' && !isScrolled
-          ? 'radial-gradient(circle 200px at calc(100% - 100px) calc(100% + 100px), rgba(183, 3, 2, 0.03) 0 99.8%, transparent 100%)'
+          ? 'radial-gradient(circle 290px at calc(100% - 100px) calc(100% + 110px), rgba(183, 3, 2, 0.075) 0 99.8%, transparent 100%)'
           : 'none',
         backdropFilter: 'none',
         color: '#0f172a',
