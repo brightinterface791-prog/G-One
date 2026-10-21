@@ -69,8 +69,8 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
       id="specialties-section"
       sx={{
         py: { xs: 6, md: 8 },
-        backgroundColor: '#ffffff',
-        borderBottom: '1px solid #e2e8f0',
+        backgroundColor: '#fff7f7',
+        borderBottom: 'none',
       }}
     >
       <Container maxWidth={false} sx={{ px: { xs: 2, sm: 3, md: 4, lg: 5 } }}>
