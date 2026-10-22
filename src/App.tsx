@@ -97,7 +97,7 @@ export default function App() {
         const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder', 'blog'];
         
         // Protect admin routes
-        const protectedPages = ['vitals', 'appointments', 'form-builder', 'blog'];
+        const protectedPages = ['vitals', 'appointments', 'form-builder'];
         
         if (protectedPages.includes(hash) && !currentUser) {
            setCurrentPage('login');
@@ -127,7 +127,7 @@ export default function App() {
 
   const handleNavigate = (page: string) => {
     const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder', 'blog'];
-    const protectedPages = ['vitals', 'appointments', 'form-builder', 'blog'];
+    const protectedPages = ['vitals', 'appointments', 'form-builder'];
 
     if (protectedPages.includes(page) && !currentUser) {
       setCurrentPage('login');
