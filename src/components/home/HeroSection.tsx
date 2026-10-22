@@ -140,10 +140,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </form>
 
             <div className="mb-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
-              <button id="hero-schedule-appointment-cta" type="button" onClick={onOpenBooking} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#b70302] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_6px_16px_rgba(183,3,2,0.12)] transition-colors hover:bg-[#970201] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b70302]">
+              <button id="hero-schedule-appointment-cta" type="button" onClick={onOpenBooking} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#b70302] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_6px_16px_rgba(183,3,2,0.12)] transition-colors hover:bg-[#970201] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b70302]">
                 <CalendarCheck2 size={18} aria-hidden="true" /> Schedule Appointment
               </button>
-              <button id="hero-track-vitals-cta" type="button" onClick={onOpenVitals} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
+              <button id="hero-track-vitals-cta" type="button" onClick={onOpenVitals} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
                 <HeartPulse size={18} aria-hidden="true" className="text-[#b70302]" /> Track Daily Vitals
               </button>
             </div>
