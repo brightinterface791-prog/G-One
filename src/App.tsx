@@ -36,7 +36,7 @@ import { Doctor, Appointment } from './types';
 export default function App() {
   // Page State
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'doctors' | 'vitals' | 'appointments' | 'specialties' | 'emergency' | 'login' | 'form-builder' | 'blog'
+    'home' | 'doctors' | 'vitals' | 'appointments' | 'specialties' | 'emergency' | 'login' | 'form-builder' | 'blog' | 'newsroom'
   >('home');
 
   // Active User session (hospital administrator logged in by default)
@@ -94,7 +94,7 @@ export default function App() {
     const handleHashChange = () => {
       try {
         const hash = window.location.hash ? window.location.hash.replace(/^#/, '').toLowerCase() : '';
-        const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder', 'blog'];
+        const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder', 'blog', 'newsroom'];
         
         // Protect admin routes
         const protectedPages = ['vitals', 'appointments', 'form-builder'];
@@ -126,7 +126,7 @@ export default function App() {
   }, [currentUser]);
 
   const handleNavigate = (page: string) => {
-    const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder', 'blog'];
+    const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder', 'blog', 'newsroom'];
     const protectedPages = ['vitals', 'appointments', 'form-builder'];
 
     if (protectedPages.includes(page) && !currentUser) {
@@ -238,7 +238,7 @@ export default function App() {
         />
       )}
 
-      {currentPage === 'blog' && <BlogPage />}
+      {(currentPage === 'blog' || currentPage === 'newsroom') && <BlogPage />}
 
       {currentPage === 'doctors' && (
         <DoctorsPage
