@@ -187,7 +187,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
                 py: 1.2,
                 backgroundColor: THEME_COLOR,
                 fontWeight: 700,
-                borderRadius: '12px',
+                borderRadius: '9999px',
                 textTransform: 'none',
                 fontSize: '0.94rem',
                 boxShadow: 'none',
@@ -211,7 +211,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
                 borderColor: '#94a3b8',
                 color: '#1e293b',
                 fontWeight: 700,
-                borderRadius: '12px',
+                borderRadius: '9999px',
                 textTransform: 'none',
                 fontSize: '0.92rem',
                 '&:hover': {
