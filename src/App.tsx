@@ -15,6 +15,7 @@ import { NotificationSnackbar } from './components/common/NotificationSnackbar';
 
 // Dedicated Page Views
 import { HomePage } from './pages/HomePage';
+import { BlogPage } from './pages/BlogPage';
 import { DoctorsPage } from './pages/DoctorsPage';
 import { VitalsPage } from './pages/VitalsPage';
 import { AppointmentsPage } from './pages/AppointmentsPage';
@@ -35,7 +36,7 @@ import { Doctor, Appointment } from './types';
 export default function App() {
   // Page State
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'doctors' | 'vitals' | 'appointments' | 'specialties' | 'emergency' | 'login' | 'form-builder'
+    'home' | 'doctors' | 'vitals' | 'appointments' | 'specialties' | 'emergency' | 'login' | 'form-builder' | 'blog'
   >('home');
 
   // Active User session (hospital administrator logged in by default)
@@ -93,10 +94,10 @@ export default function App() {
     const handleHashChange = () => {
       try {
         const hash = window.location.hash ? window.location.hash.replace(/^#/, '').toLowerCase() : '';
-        const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder'];
+        const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder', 'blog'];
         
         // Protect admin routes
-        const protectedPages = ['vitals', 'appointments', 'form-builder'];
+        const protectedPages = ['vitals', 'appointments', 'form-builder', 'blog'];
         
         if (protectedPages.includes(hash) && !currentUser) {
            setCurrentPage('login');
@@ -125,8 +126,8 @@ export default function App() {
   }, [currentUser]);
 
   const handleNavigate = (page: string) => {
-    const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder'];
-    const protectedPages = ['vitals', 'appointments', 'form-builder'];
+    const validPages = ['home', 'doctors', 'vitals', 'appointments', 'specialties', 'emergency', 'login', 'form-builder', 'blog'];
+    const protectedPages = ['vitals', 'appointments', 'form-builder', 'blog'];
 
     if (protectedPages.includes(page) && !currentUser) {
       setCurrentPage('login');
@@ -236,6 +237,8 @@ export default function App() {
           onNavigatePage={handleNavigate}
         />
       )}
+
+      {currentPage === 'blog' && <BlogPage />}
 
       {currentPage === 'doctors' && (
         <DoctorsPage
