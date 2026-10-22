@@ -79,6 +79,10 @@ export const Navbar: React.FC<NavbarProps> = ({
       id: 'specialties',
       label: 'Specialties',
     },
+    {
+      id: 'blog',
+      label: 'Blog',
+    },
   ];
 
   return (
