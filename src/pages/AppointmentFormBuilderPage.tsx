@@ -289,19 +289,20 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
             }}
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flex: 1, width: { xs: '100%', sm: 'auto' } }}>
-              <FormControl size="small" sx={{ minWidth: { xs: '100%', sm: 320 } }}>
-                <Select
+              <div className="w-full min-w-0 sm:min-w-[320px]">
+                <select
+                  aria-label="Select doctor to customize appointment form"
                   value={selectedDoctorId}
-                  inputProps={{ "aria-label": "Select Doctor to Customize" }}
                   onChange={(e) => setSelectedDoctorId(e.target.value)}
+                  className="h-11 w-full appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm text-slate-800 shadow-sm outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
                 >
                   {doctors.map((doc) => (
-                    <MenuItem key={doc.id} value={doc.id}>
+                    <option key={doc.id} value={doc.id}>
                       {doc.name} — {doc.specialty} ({formConfig.doctorSpecificFields[doc.id]?.length || 0} custom fields)
-                    </MenuItem>
+                    </option>
                   ))}
-                </Select>
-              </FormControl>
+                </select>
+              </div>
             </Box>
 
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -548,10 +549,10 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                 </Typography>
                 <Grid container spacing={1}>
                   <Grid size={6}>
-                    <TextField fullWidth size="small" label="Patient Name" disabled defaultValue="Alex Rivera" sx={{ backgroundColor: '#ffffff' }} />
+                    <div className="space-y-1"><label className="block text-xs font-medium text-slate-600">Patient Name</label><input disabled value="Alex Rivera" readOnly className="h-11 w-full rounded-full border border-slate-200 bg-white px-4 text-sm text-slate-700 disabled:bg-slate-50" /></div>
                   </Grid>
                   <Grid size={6}>
-                    <TextField fullWidth size="small" label="Phone" disabled defaultValue="+1 (555) 234-5678" sx={{ backgroundColor: '#ffffff' }} />
+                    <div className="space-y-1"><label className="block text-xs font-medium text-slate-600">Phone</label><input disabled value="+1 (555) 234-5678" readOnly className="h-11 w-full rounded-full border border-slate-200 bg-white px-4 text-sm text-slate-700 disabled:bg-slate-50" /></div>
                   </Grid>
                 </Grid>
               </Box>
