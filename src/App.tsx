@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider, CssBaseline, Box } from '@mui/material';
 import theme from './theme/theme';
+import { authSession } from './features/auth';
 
 // Custom Hooks
 import { useHospitalManagement } from './hooks/useHospitalManagement';
@@ -39,13 +40,7 @@ export default function App() {
 
   // Active User session (hospital administrator logged in by default)
   const [currentUser, setCurrentUser] = useState<{ name: string; role: string } | null>(() => {
-    try {
-      const saved = localStorage.getItem('g_one_user');
-      if (saved) return JSON.parse(saved);
-    } catch (e) {
-      // localStorage fallback
-    }
-    return null;
+    return authSession.getUser() as { name: string; role: string } | null;
   });
 
   // Hospital Dynamic Information Management Hook
@@ -208,7 +203,7 @@ export default function App() {
     }
     setCurrentUser(user);
     try {
-      localStorage.setItem('g_one_user', JSON.stringify(user));
+      authSession.saveAppUser(user);
     } catch (e) {}
     showToast(`Welcome back, ${user.name || 'Admin'}!`, 'success');
     // Navigate directly: handleNavigate would still see the pre-login currentUser in this render.
