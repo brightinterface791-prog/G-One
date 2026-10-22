@@ -62,12 +62,12 @@ export const HealthArticlesSection: React.FC = () => {
               sx={{
                 backgroundColor: 'rgba(183, 3, 2, 0.08)',
                 color: THEME_COLOR,
-                fontWeight: 700,
+                fontWeight: 600,
                 fontSize: '0.75rem',
                 mb: 1.5,
               }}
             />
-            <Typography variant="h2" sx={{ fontSize: { xs: '1.875rem', md: '2.25rem' }, fontWeight: 800, color: '#0f172a' }}>
+            <Typography variant="h2" sx={{ fontSize: { xs: '1.875rem', md: '2.25rem' }, fontWeight: 600, color: '#0f172a' }}>
               Doctor-Reviewed Health Guides
             </Typography>
             <Typography variant="body1" sx={{ color: '#475569', mt: 0.5 }}>
@@ -114,7 +114,7 @@ export const HealthArticlesSection: React.FC = () => {
                       sx={{
                         backgroundColor: 'rgba(14, 116, 144, 0.1)',
                         color: '#0e7490',
-                        fontWeight: 700,
+                        fontWeight: 600,
                         fontSize: '0.7rem',
                         height: 22,
                       }}
@@ -125,7 +125,7 @@ export const HealthArticlesSection: React.FC = () => {
                     </Box>
                   </Box>
 
-                  <Typography variant="h6" sx={{ fontWeight: 700, color: '#0f172a', lineHeight: 1.3, mb: 1.5 }}>
+                  <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', lineHeight: 1.3, mb: 1.5 }}>
                     {art.title}
                   </Typography>
 
