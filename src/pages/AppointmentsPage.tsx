@@ -452,25 +452,24 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
             </Box>
 
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, width: { xs: '100%', md: 'auto' } }}>
-              <FormControl size="small" sx={{ minWidth: { xs: '100%', sm: 300 } }}>
-                <InputLabel id="doctor-roster-filter-label">Filter by Doctor</InputLabel>
-                <Select
-                  labelId="doctor-roster-filter-label"
+              <div className="relative w-full min-w-0 md:w-[340px]">
+                <select
+                  aria-label="Filter appointments by doctor"
                   value={selectedDoctorFilter}
-                  label="Filter by Doctor"
                   onChange={(e) => setSelectedDoctorFilter(e.target.value)}
+                  className="h-11 w-full min-w-0 appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm font-normal text-slate-800 shadow-sm outline-none transition-colors hover:border-slate-300 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
                 >
-                  <MenuItem value="All">All Hospital Clinicians ({appointments.length} Appointments)</MenuItem>
+                  <option value="All">All Hospital Clinicians ({appointments.length} Appointments)</option>
                   {doctors.map((doc) => {
                     const docAptCount = appointments.filter((a) => a.doctorId === doc.id || a.doctorName.includes(doc.name)).length;
                     return (
-                      <MenuItem key={doc.id} value={doc.id}>
+                      <option key={doc.id} value={doc.id}>
                         {doc.name} ({doc.specialty}) — {docAptCount} visits
-                      </MenuItem>
+                      </option>
                     );
                   })}
-                </Select>
-              </FormControl>
+                </select>
+              </div>
 
               {selectedDoctorFilter !== 'All' && (
                 <Button
