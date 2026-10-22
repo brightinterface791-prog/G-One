@@ -60,12 +60,12 @@ export const PatientReviewsSection: React.FC = () => {
             sx={{
               backgroundColor: 'rgba(183, 3, 2, 0.08)',
               color: THEME_COLOR,
-              fontWeight: 700,
+              fontWeight: 600,
               fontSize: '0.75rem',
               mb: 1.5,
             }}
           />
-          <Typography variant="h2" sx={{ fontSize: { xs: '1.875rem', md: '2.25rem' }, fontWeight: 800, color: '#0f172a', mb: 1 }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: '1.875rem', md: '2.25rem' }, fontWeight: 600, color: '#0f172a', mb: 1 }}>
             Trusted by Thousands of Families
           </Typography>
           <Typography variant="body1" sx={{ color: '#475569' }}>
@@ -105,7 +105,7 @@ export const PatientReviewsSection: React.FC = () => {
                   <Avatar src={rev.avatar} alt={rev.name} sx={{ width: 44, height: 44, borderRadius: 2 }} />
                   <Box sx={{ flex: 1 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                      <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a' }}>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a' }}>
                         {rev.name}
                       </Typography>
                       <Verified sx={{ color: '#16a34a', fontSize: 16 }} />
