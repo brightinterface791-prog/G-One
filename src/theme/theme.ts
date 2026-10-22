@@ -509,7 +509,7 @@ let theme = createTheme({
         root: {
           fontFamily: FONT_TEXT,
           fontWeight: 500,
-          borderRadius: 6,
+          borderRadius: 9999,
         },
       },
     },
