@@ -25,7 +25,7 @@ export const BlogPage: React.FC = () => {
   const remaining = visible.slice(1);
 
   return (
-    <main className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
+    <main className="gone-newsroom min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
       <div className="mx-auto max-w-[1440px] px-5 pb-20 pt-12 sm:px-8 lg:px-12 lg:pt-20">
         <header className="mb-12 flex flex-col justify-between gap-4 border-b border-[#d2d2d7] pb-9 md:flex-row md:items-end">
           <div>
