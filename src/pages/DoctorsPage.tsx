@@ -760,13 +760,6 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
 
                   <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.8 }}>
                     <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Doctor Full Name</Typography>
-                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Qualifications</Typography>
-                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>OPD Chamber Room</Typography>
-                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Consultation Fee ($)</Typography>
-                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Experience (Years)</Typography>
-                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Morning Shift</Typography>
-                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Evening Shift</Typography>
-                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Clinical Profile Summary</Typography>
                     <TextField
                       fullWidth
                       size="small"
@@ -810,6 +803,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                       </Grid>
 
                       <Grid size={{ xs: 12, sm: 6 }}>
+                        <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Qualifications</Typography>
                         <TextField
                           fullWidth
                           size="small"
@@ -843,6 +837,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
 
                   <Grid container spacing={1.5}>
                     <Grid size={{ xs: 12, sm: 5 }}>
+                      <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>OPD Chamber Room</Typography>
                       <TextField
                         fullWidth
                         size="small"
@@ -863,6 +858,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                     </Grid>
 
                     <Grid size={{ xs: 12, sm: 3.5 }}>
+                      <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Consultation Fee ($)</Typography>
                       <TextField
                         fullWidth
                         type="number"
@@ -883,6 +879,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                     </Grid>
 
                     <Grid size={{ xs: 12, sm: 3.5 }}>
+                      <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Experience (Years)</Typography>
                       <TextField
                         fullWidth
                         type="number"
@@ -977,6 +974,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                   {/* Shift Timings */}
                   <Grid container spacing={1.5}>
                     <Grid size={{ xs: 12, sm: 6 }}>
+                      <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Morning Shift</Typography>
                       <TextField
                         fullWidth
                         size="small"
@@ -996,6 +994,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                       />
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6 }}>
+                      <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Evening Shift</Typography>
                       <TextField
                         fullWidth
                         size="small"
@@ -1026,6 +1025,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                     </Typography>
                   </Box>
 
+                  <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Clinical Profile Summary</Typography>
                   <TextField
                     fullWidth
                     multiline
