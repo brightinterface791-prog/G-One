@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Search as SearchIcon, CalendarCheck2, HeartPulse, ArrowRight, CheckCircle2 } from 'lucide-react';
 import {
   Box,
   Container,
@@ -116,100 +117,46 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               Book consultations with top medical specialists, monitor your daily vitals in real-time, and access certified clinical care with total peace of mind.
             </Typography>
 
-            {/* Tailwind search: a single compact field and a clearly separated action. */}
-            <form
-              id="hero-doctor-search-form"
-              onSubmit={handleSearchSubmit}
-              role="search"
-              className="mb-7 w-full max-w-[650px]"
-            >
-              <label htmlFor="hero-doctor-search" className="mb-2 block text-[13px] font-medium text-slate-700">
-                Search doctor
+            {/* Compact responsive doctor search */}
+            <form id="hero-doctor-search-form" role="search" onSubmit={handleSearchSubmit} className="mb-5 w-full max-w-[650px]">
+              <label htmlFor="hero-doctor-search" className="mb-2 block text-xs font-semibold tracking-wide text-slate-600">
+                Find the right doctor
               </label>
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-stretch">
-                <div className="flex min-h-11 min-w-0 flex-1 items-center gap-2.5 rounded-lg border border-slate-300 bg-white px-3.5 shadow-sm transition-colors focus-within:border-slate-500 focus-within:ring-2 focus-within:ring-slate-200">
-                  <Search size={18} aria-hidden="true" className="shrink-0 text-slate-400" />
+              <div className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white p-1.5 shadow-[0_6px_24px_rgba(15,23,42,0.06)] transition focus-within:border-slate-300 focus-within:ring-2 focus-within:ring-slate-100 sm:flex-row sm:items-center">
+                <div className="flex min-w-0 flex-1 items-center gap-2.5 px-2.5">
+                  <SearchIcon size={19} strokeWidth={1.8} aria-hidden="true" className="shrink-0 text-slate-400" />
                   <input
                     id="hero-doctor-search"
                     type="search"
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
-                    placeholder="Doctor name, specialty or condition"
+                    placeholder="Name, specialty or condition"
                     autoComplete="off"
-                    className="h-11 min-w-0 w-full flex-1 border-0 bg-transparent p-0 text-sm font-normal text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                    className="h-10 w-full min-w-0 flex-1 border-0 bg-transparent p-0 text-sm font-normal text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
                   />
                 </div>
-                <button
-                  id="hero-search-submit-btn"
-                  type="submit"
-                  className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg bg-[#b70302] px-5 text-sm font-medium text-white transition-colors hover:bg-[#900201] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b70302]"
-                >
-                  Find Doctor
+                <button id="hero-search-submit-btn" type="submit" className="inline-flex h-10 w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-[#b70302] px-5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#970201] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b70302] sm:w-auto">
+                  Find Doctor <ArrowRight size={16} aria-hidden="true" />
                 </button>
               </div>
             </form>
 
-            {/* Primary Action Buttons */}
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 4 }}>
-              <Button
-                id="hero-schedule-appointment-cta"
-                variant="contained"
-                color="primary"
-                size="large"
-                onClick={onOpenBooking}
-                startIcon={<EventAvailable />}
-                sx={{
-                  py: 1.4,
-                  px: 3.5,
-                  fontSize: '1rem',
-                  fontWeight: 700,
-                  borderRadius: 2,
-                  boxShadow: '0 8px 20px rgba(183, 3, 2, 0.25)',
-                }}
-              >
-                Schedule Appointment
-              </Button>
+            <div className="mb-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+              <button id="hero-schedule-appointment-cta" type="button" onClick={onOpenBooking} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#b70302] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_6px_16px_rgba(183,3,2,0.12)] transition-colors hover:bg-[#970201] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b70302]">
+                <CalendarCheck2 size={18} aria-hidden="true" /> Schedule Appointment
+              </button>
+              <button id="hero-track-vitals-cta" type="button" onClick={onOpenVitals} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500">
+                <HeartPulse size={18} aria-hidden="true" className="text-[#b70302]" /> Track Daily Vitals
+              </button>
+            </div>
 
-              <Button
-                id="hero-track-vitals-cta"
-                variant="outlined"
-                color="primary"
-                size="large"
-                onClick={onOpenVitals}
-                startIcon={<Favorite sx={{ color: THEME_COLOR }} />}
-                sx={{
-                  py: 1.4,
-                  px: 3,
-                  fontSize: '1rem',
-                  fontWeight: 700,
-                  borderRadius: 2,
-                  borderWidth: 2,
-                  backgroundColor: '#ffffff',
-                  '&:hover': {
-                    borderWidth: 2,
-                    backgroundColor: 'rgba(183, 3, 2, 0.04)',
-                  },
-                }}
-              >
-                Track Daily Vitals
-              </Button>
-            </Box>
-
-            {/* Micro Trust Proofs */}
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, color: '#475569', fontSize: '0.875rem' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8 }}>
-                <CheckCircle sx={{ color: '#16a34a', fontSize: 18 }} />
-                <span>Instant Confirmation</span>
-              </Box>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8 }}>
-                <CheckCircle sx={{ color: '#16a34a', fontSize: 18 }} />
-                <span>Zero Booking Fees</span>
-              </Box>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8 }}>
-                <CheckCircle sx={{ color: '#16a34a', fontSize: 18 }} />
-                <span>Encrypted Patient Data</span>
-              </Box>
-            </Box>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-normal text-slate-500 sm:text-[13px]">
+              {['Instant Confirmation', 'Zero Booking Fees', 'Encrypted Patient Data'].map((item) => (
+                <span key={item} className="inline-flex items-center gap-1.5">
+                  <CheckCircle2 size={15} aria-hidden="true" className="text-emerald-600" />{item}
+                </span>
+              ))}
+            </div>
           </Grid>
 
           {/* Right Column: Visual Feature Card & Quick Vitals Preview */}
