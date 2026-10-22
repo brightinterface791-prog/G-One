@@ -38,20 +38,20 @@ export const BlogPage: React.FC = () => {
         <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <nav aria-label="Newsroom categories" className="flex flex-wrap gap-2">
             {categories.map(item => (
-              <button key={item} type="button" onClick={() => { setCategory(item); setSelected(null); }} aria-current={category === item ? 'page' : undefined} className={`rounded-md px-5 py-2.5 text-sm transition-colors ${category === item ? 'bg-[#1d1d1f] font-semibold text-white' : 'bg-white font-medium text-[#6e6e73] hover:text-[#1d1d1f]'}`}>
+              <button key={item} type="button" onClick={() => { setCategory(item); setSelected(null); }} aria-current={category === item ? 'page' : undefined} className={`rounded-[4px] px-5 py-2.5 text-sm transition-colors ${category === item ? 'bg-[#1d1d1f] font-semibold text-white' : 'bg-white font-medium text-[#6e6e73] hover:text-[#1d1d1f]'}`}>
                 {item}
               </button>
             ))}
           </nav>
-          <label className="flex w-full shrink-0 items-center gap-3 rounded-md border border-[#d2d2d7] bg-white px-4 py-3 sm:w-60">
-            <Search size={17} className="shrink-0 text-[#86868b]" />
-            <input value={search} onChange={event => { setSearch(event.target.value); setSelected(null); }} placeholder="Search stories" aria-label="Search Newsroom stories" className="min-w-0 w-full bg-transparent text-sm outline-none placeholder:text-[#86868b]" />
-          </label>
+          <div className="flex w-full shrink-0 items-center gap-3 border-b border-[#b8b8bd] bg-transparent px-1 py-2.5 transition-colors focus-within:border-[#b70302] sm:w-64">
+            <Search size={19} className="shrink-0 text-[#6e6e73]" aria-hidden="true" />
+            <input type="search" value={search} onChange={event => { setSearch(event.target.value); setSelected(null); }} placeholder="Search Newsroom" aria-label="Search Newsroom stories" className="min-w-0 w-full appearance-none border-0 bg-transparent p-0 text-[15px] text-[#1d1d1f] outline-none ring-0 placeholder:text-[#86868b] focus:border-0 focus:outline-none focus:ring-0" />
+          </div>
         </div>
         <div>
           <section aria-label="Newsroom stories" className="min-w-0">
             {activeArticle ? (
-              <article className="overflow-hidden rounded-lg bg-white">
+              <article className="overflow-hidden rounded-[4px] bg-white">
                 <img src={activeArticle.image} alt={activeArticle.title} loading="eager" className="h-[240px] w-full object-cover sm:h-[370px]" />
                 <div className="px-6 py-9 sm:px-12 sm:py-12">
                   <button type="button" onClick={() => setSelected(null)} className="mb-9 text-sm font-medium text-[#b70302] hover:underline">← Back to Newsroom</button>
@@ -66,7 +66,7 @@ export const BlogPage: React.FC = () => {
             ) : visible.length ? (
               <>
                 <div className="mb-6 flex items-end justify-between gap-3"><h2 className="text-[28px] font-semibold tracking-[-0.035em]">{category === 'All Stories' ? 'Latest stories' : category}</h2><span className="text-sm text-[#86868b]">{visible.length} stories</span></div>
-                {featured && <button type="button" onClick={() => { setSelected(featured.id); window.scrollTo({top:0,behavior:'smooth'}); }} className="group mb-8 block w-full overflow-hidden rounded-lg bg-white text-left shadow-sm transition-shadow hover:shadow-xl hover:shadow-black/5">
+                {featured && <button type="button" onClick={() => { setSelected(featured.id); window.scrollTo({top:0,behavior:'smooth'}); }} className="group mb-8 block w-full overflow-hidden rounded-[4px] bg-white text-left shadow-sm transition-shadow hover:shadow-xl hover:shadow-black/5">
                   <img src={featured.image} alt={featured.title} loading="eager" className="h-[250px] w-full object-cover sm:h-[370px]" />
                   <div className="p-7 sm:p-9">
                     <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[#b70302]">{featured.category} <span className="mx-2 text-[#d2d2d7]">•</span> {featured.date}</p>
@@ -76,7 +76,7 @@ export const BlogPage: React.FC = () => {
                   </div>
                 </button>}
                 {remaining.length > 0 && <div className="grid gap-6 md:grid-cols-2">{remaining.map(article => (
-                  <button key={article.id} type="button" onClick={() => { setSelected(article.id); window.scrollTo({top:0,behavior:'smooth'}); }} className="group flex flex-col overflow-hidden rounded-lg bg-white text-left shadow-sm transition-shadow hover:shadow-lg hover:shadow-black/5">
+                  <button key={article.id} type="button" onClick={() => { setSelected(article.id); window.scrollTo({top:0,behavior:'smooth'}); }} className="group flex flex-col overflow-hidden rounded-[4px] bg-white text-left shadow-sm transition-shadow hover:shadow-lg hover:shadow-black/5">
                     <img src={article.image} alt={article.title} loading="lazy" className="h-48 w-full object-cover" />
                     <div className="flex flex-1 flex-col p-6">
                       <p className="text-xs font-semibold uppercase tracking-wide text-[#b70302]">{article.category}</p>
@@ -87,7 +87,7 @@ export const BlogPage: React.FC = () => {
                   </button>
                 ))}</div>}
               </>
-            ) : <div className="rounded-lg bg-white p-12 text-center text-sm text-[#6e6e73]">No stories match your search.</div>}
+            ) : <div className="rounded-[4px] bg-white p-12 text-center text-sm text-[#6e6e73]">No stories match your search.</div>}
           </section>
         </div>
       </div>
