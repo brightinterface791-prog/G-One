@@ -272,7 +272,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 sx={{
                   backgroundColor: 'rgba(183, 3, 2, 0.08)',
                   color: THEME_COLOR,
-                  fontWeight: 800,
+                  fontWeight: 600,
                   fontSize: '0.68rem',
                   borderRadius: '9999px',
                 }}
@@ -281,7 +281,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 Doctor Directory & OPD Sitting Roster
               </Typography>
             </Box>
-            <Typography variant="h4" sx={{ fontWeight: 900, color: '#0f172a', fontSize: { xs: '1.5rem', sm: '1.85rem' }, letterSpacing: '-0.02em' }}>
+            <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', fontSize: { xs: '1.5rem', sm: '1.85rem' }, letterSpacing: '-0.02em' }}>
               Hospital Doctors & Sitting Schedules
             </Typography>
             <Typography variant="body2" sx={{ color: '#475569', fontSize: '0.86rem', maxWidth: 740 }}>
@@ -298,7 +298,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
               sx={{
                 backgroundColor: THEME_COLOR,
                 textTransform: 'none',
-                fontWeight: 700,
+                fontWeight: 600,
                 borderRadius: '9999px',
                 fontSize: '0.82rem',
                 px: 2.5,
@@ -358,7 +358,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
               size="small"
               onClick={() => onSelectSpecialty('All')}
               sx={{
-                fontWeight: 700,
+                fontWeight: 600,
                 fontSize: '0.72rem',
                 backgroundColor: selectedSpecialty === 'All' ? THEME_COLOR : '#f1f5f9',
                 color: selectedSpecialty === 'All' ? '#ffffff' : '#475569',
@@ -373,7 +373,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                   size="small"
                   onClick={() => onSelectSpecialty(spec.title)}
                   sx={{
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: '0.72rem',
                     backgroundColor: isSelected ? THEME_COLOR : '#ffffff',
                     color: isSelected ? '#ffffff' : '#475569',
@@ -397,7 +397,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 setSearchTerm('');
                 onSelectSpecialty('All');
               }}
-              sx={{ color: THEME_COLOR, fontWeight: 700, fontSize: '0.78rem', textTransform: 'none' }}
+              sx={{ color: THEME_COLOR, fontWeight: 600, fontSize: '0.78rem', textTransform: 'none' }}
             >
               Clear Filters
             </Button>
@@ -416,7 +416,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
             }}
           >
             <MedicalServices sx={{ fontSize: 44, color: '#94a3b8', mb: 1.5 }} />
-            <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5, fontSize: '1.05rem' }}>
+            <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5, fontSize: '1.05rem' }}>
               No Doctors Found Matching Query
             </Typography>
             <Typography variant="body2" sx={{ color: '#64748b', mb: 2.5, fontSize: '0.82rem' }}>
@@ -429,7 +429,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 setSearchTerm('');
                 onSelectSpecialty('All');
               }}
-              sx={{ textTransform: 'none', fontWeight: 700, borderRadius: '9999px' }}
+              sx={{ textTransform: 'none', fontWeight: 600, borderRadius: '9999px' }}
             >
               Show All Doctors
             </Button>
@@ -473,7 +473,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                         <Box sx={{ flexGrow: 1 }}>
                           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.6 }}>
-                              <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.98rem' }}>
+                              <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.98rem' }}>
                                 {doc.name}
                               </Typography>
                               <Verified sx={{ color: '#0284c7', fontSize: 16 }} />
@@ -498,7 +498,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                               sx={{
                                 backgroundColor: 'rgba(183, 3, 2, 0.08)',
                                 color: THEME_COLOR,
-                                fontWeight: 700,
+                                fontWeight: 600,
                                 height: 20,
                                 fontSize: '0.7rem',
                               }}
@@ -528,7 +528,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 0.6 }}>
                           <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.6, color: '#0f172a' }}>
                             <MeetingRoom sx={{ fontSize: 16, color: THEME_COLOR }} />
-                            <Typography variant="caption" sx={{ fontWeight: 800, fontSize: '0.78rem' }}>
+                            <Typography variant="caption" sx={{ fontWeight: 600, fontSize: '0.78rem' }}>
                               {schedule?.roomChamber || doc.hospitalLocation}
                             </Typography>
                           </Box>
@@ -538,7 +538,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                             sx={{
                               fontSize: '0.7rem',
                               textTransform: 'none',
-                              fontWeight: 700,
+                              fontWeight: 600,
                               p: 0,
                               minWidth: 'auto',
                               color: '#0284c7',
@@ -568,7 +568,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                                 sx={{
                                   height: 18,
                                   fontSize: '0.62rem',
-                                  fontWeight: 700,
+                                  fontWeight: 600,
                                   backgroundColor: active ? '#e0f2fe' : '#f1f5f9',
                                   color: active ? '#0369a1' : '#94a3b8',
                                   border: active ? '1px solid #bae6fd' : 'none',
@@ -606,7 +606,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                             onClick={() => onViewDoctorAppointments(doc)}
                             sx={{
                               flex: 1,
-                              fontWeight: 700,
+                              fontWeight: 600,
                               fontSize: '0.76rem',
                               textTransform: 'none',
                               borderRadius: '9999px',
@@ -623,7 +623,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                           size="small"
                           onClick={() => onViewDoctorDetails(doc)}
                           sx={{
-                            fontWeight: 700,
+                            fontWeight: 600,
                             fontSize: '0.76rem',
                             textTransform: 'none',
                             borderRadius: '9999px',
@@ -641,7 +641,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                           onClick={() => onBookDoctor(doc)}
                           sx={{
                             backgroundColor: THEME_COLOR,
-                            fontWeight: 700,
+                            fontWeight: 600,
                             fontSize: '0.76rem',
                             textTransform: 'none',
                             borderRadius: '9999px',
@@ -708,7 +708,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
               <PersonAddAlt1 sx={{ fontSize: 22 }} />
             </Box>
             <Box>
-              <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '1.05rem', lineHeight: 1.2 }}>
+              <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '1.05rem', lineHeight: 1.2 }}>
                 Add Doctor to Hospital Faculty
               </Typography>
               <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.75rem', display: 'block', mt: 0.2 }}>
@@ -723,7 +723,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
               size="small"
               sx={{
                 height: 22,
-                fontWeight: 800,
+                fontWeight: 600,
                 fontSize: '0.64rem',
                 letterSpacing: '0.03em',
                 backgroundColor: '#f1f5f9',
@@ -753,7 +753,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 <Paper elevation={0} sx={{ p: 2, borderRadius: 2, border: '1px solid #e2e8f0', backgroundColor: '#ffffff' }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8, mb: 1.5 }}>
                     <MedicalServices sx={{ fontSize: 16, color: THEME_COLOR }} />
-                    <Typography variant="caption" sx={{ fontWeight: 800, textTransform: 'uppercase', color: '#334155', letterSpacing: '0.03em', fontSize: '0.72rem' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, textTransform: 'uppercase', color: '#334155', letterSpacing: '0.03em', fontSize: '0.72rem' }}>
                       1. Physician Identity & Department
                     </Typography>
                   </Box>
@@ -830,7 +830,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 <Paper elevation={0} sx={{ p: 2, borderRadius: 2, border: '1px solid #e2e8f0', backgroundColor: '#ffffff' }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8, mb: 1.5 }}>
                     <MeetingRoom sx={{ fontSize: 16, color: '#0284c7' }} />
-                    <Typography variant="caption" sx={{ fontWeight: 800, textTransform: 'uppercase', color: '#334155', letterSpacing: '0.03em', fontSize: '0.72rem' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, textTransform: 'uppercase', color: '#334155', letterSpacing: '0.03em', fontSize: '0.72rem' }}>
                       2. OPD Facility & Consultation Fee
                     </Typography>
                   </Box>
@@ -913,7 +913,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                   <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 1.2 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8 }}>
                       <Schedule sx={{ fontSize: 16, color: '#d97706' }} />
-                      <Typography variant="caption" sx={{ fontWeight: 800, textTransform: 'uppercase', color: '#334155', letterSpacing: '0.03em', fontSize: '0.72rem' }}>
+                      <Typography variant="caption" sx={{ fontWeight: 600, textTransform: 'uppercase', color: '#334155', letterSpacing: '0.03em', fontSize: '0.72rem' }}>
                         3. OPD Sitting Days & Shift Schedule
                       </Typography>
                     </Box>
@@ -956,7 +956,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                           size="small"
                           sx={{
                             borderRadius: '9999px',
-                            fontWeight: 700,
+                            fontWeight: 600,
                             fontSize: '0.72rem',
                             cursor: 'pointer',
                             backgroundColor: selected ? THEME_COLOR : '#f1f5f9',
@@ -1020,7 +1020,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 <Paper elevation={0} sx={{ p: 2, borderRadius: 2, border: '1px solid #e2e8f0', backgroundColor: '#ffffff' }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8, mb: 1.2 }}>
                     <Verified sx={{ fontSize: 16, color: '#16a34a' }} />
-                    <Typography variant="caption" sx={{ fontWeight: 800, textTransform: 'uppercase', color: '#334155', letterSpacing: '0.03em', fontSize: '0.72rem' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, textTransform: 'uppercase', color: '#334155', letterSpacing: '0.03em', fontSize: '0.72rem' }}>
                       4. Clinical Profile Summary & Special Interests
                     </Typography>
                   </Box>
@@ -1058,20 +1058,20 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 1.8 }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.8 }}>
                     <AutoAwesome sx={{ fontSize: 16, color: THEME_COLOR }} />
-                    <Typography variant="caption" sx={{ fontWeight: 800, textTransform: 'uppercase', color: '#0f172a', fontSize: '0.72rem', letterSpacing: '0.03em' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, textTransform: 'uppercase', color: '#0f172a', fontSize: '0.72rem', letterSpacing: '0.03em' }}>
                       Live Faculty Preview
                     </Typography>
                   </Box>
                   <Chip
                     label="DIRECTORY CARD"
                     size="small"
-                    sx={{ height: 18, fontSize: '0.6rem', fontWeight: 800, backgroundColor: '#f0fdf4', color: '#166534', border: '1px solid #bbf7d0' }}
+                    sx={{ height: 18, fontSize: '0.6rem', fontWeight: 600, backgroundColor: '#f0fdf4', color: '#166534', border: '1px solid #bbf7d0' }}
                   />
                 </Box>
 
                 {/* Clinician Portrait Selector */}
                 <Box sx={{ mb: 2 }}>
-                  <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 700, display: 'block', mb: 0.8, fontSize: '0.68rem' }}>
+                  <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600, display: 'block', mb: 0.8, fontSize: '0.68rem' }}>
                     Select Faculty Portrait Photo:
                   </Typography>
                   <Box sx={{ display: 'flex', gap: 1 }}>
@@ -1109,14 +1109,14 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                       }}
                     />
                     <Box sx={{ minWidth: 0, flex: 1 }}>
-                      <Typography variant="subtitle2" noWrap sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.92rem' }}>
+                      <Typography variant="subtitle2" noWrap sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.92rem' }}>
                         {newDocName || 'Dr. Robert Chen, MD'}
                       </Typography>
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.6, mt: 0.3 }}>
                         <Chip
                           label={newDocSpecialty || 'Cardiology'}
                           size="small"
-                          sx={{ height: 18, fontSize: '0.62rem', fontWeight: 700, backgroundColor: 'rgba(183, 3, 2, 0.08)', color: THEME_COLOR }}
+                          sx={{ height: 18, fontSize: '0.62rem', fontWeight: 600, backgroundColor: 'rgba(183, 3, 2, 0.08)', color: THEME_COLOR }}
                         />
                       </Box>
                     </Box>
@@ -1135,7 +1135,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                         {newDocChamber || 'Chamber 205, Main Block'}
                       </Typography>
                     </Box>
-                    <Typography variant="caption" sx={{ fontWeight: 800, color: '#16a34a', fontSize: '0.76rem' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, color: '#16a34a', fontSize: '0.76rem' }}>
                       ${newDocFee} / visit
                     </Typography>
                   </Box>
@@ -1149,7 +1149,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
 
                   {/* Sitting Days Preview */}
                   <Box sx={{ mt: 1 }}>
-                    <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 700, display: 'block', mb: 0.5, fontSize: '0.66rem' }}>
+                    <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600, display: 'block', mb: 0.5, fontSize: '0.66rem' }}>
                       OPD Sitting Days:
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.4 }}>
@@ -1163,7 +1163,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                             sx={{
                               height: 17,
                               fontSize: '0.6rem',
-                              fontWeight: 700,
+                              fontWeight: 600,
                               backgroundColor: active ? '#e0f2fe' : '#f1f5f9',
                               color: active ? '#0369a1' : '#94a3b8',
                               border: active ? '1px solid #bae6fd' : 'none',
