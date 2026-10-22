@@ -87,14 +87,14 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
                 label="BIOMETRIC HEALTH MONITOR"
                 size="small"
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 600,
                   backgroundColor: 'rgba(183, 3, 2, 0.1)',
                   color: THEME_COLOR,
                   borderRadius: 1.5,
                 }}
               />
             </Box>
-            <Typography variant="h3" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>
+            <Typography variant="h3" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
               Patient Vitals Analytics & Monitoring
             </Typography>
             <Typography variant="body1" sx={{ color: '#64748b' }}>
@@ -109,7 +109,7 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
             size="large"
             startIcon={<AddCircle />}
             onClick={onOpenAddVitals}
-            sx={{ fontWeight: 700, py: 1.2, px: 3, boxShadow: '0 4px 14px rgba(183, 3, 2, 0.3)' }}
+            sx={{ fontWeight: 600, py: 1.2, px: 3, boxShadow: '0 4px 14px rgba(183, 3, 2, 0.3)' }}
           >
             Log New Reading
           </Button>
@@ -138,14 +138,14 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
                   label={bpEval.label}
                   size="small"
                   sx={{
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: '0.72rem',
                     backgroundColor: bpEval.status === 'normal' ? '#dcfce7' : bpEval.status === 'warning' ? '#fef3c7' : '#fee2e2',
                     color: bpEval.color,
                   }}
                 />
               </Box>
-              <Typography variant="h4" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>
+              <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                 {latestVital.bloodPressureSystolic}/{latestVital.bloodPressureDiastolic}
                 <Typography component="span" variant="body2" sx={{ color: '#64748b', ml: 1 }}>
                   mmHg
@@ -178,14 +178,14 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
                   label={hrEval.label}
                   size="small"
                   sx={{
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: '0.72rem',
                     backgroundColor: hrEval.status === 'normal' ? '#dcfce7' : '#fef3c7',
                     color: hrEval.color,
                   }}
                 />
               </Box>
-              <Typography variant="h4" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>
+              <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                 {latestVital.heartRate}
                 <Typography component="span" variant="body2" sx={{ color: '#64748b', ml: 1 }}>
                   bpm
@@ -218,14 +218,14 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
                   label={glucoseEval.label}
                   size="small"
                   sx={{
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: '0.72rem',
                     backgroundColor: glucoseEval.status === 'normal' ? '#dcfce7' : '#fee2e2',
                     color: glucoseEval.color,
                   }}
                 />
               </Box>
-              <Typography variant="h4" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>
+              <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                 {latestVital.bloodGlucose}
                 <Typography component="span" variant="body2" sx={{ color: '#64748b', ml: 1 }}>
                   mg/dL
@@ -256,14 +256,14 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
                   label={spo2Eval.label}
                   size="small"
                   sx={{
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: '0.72rem',
                     backgroundColor: spo2Eval.status === 'normal' ? '#dcfce7' : '#fee2e2',
                     color: spo2Eval.color,
                   }}
                 />
               </Box>
-              <Typography variant="h4" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>
+              <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                 {latestVital.oxygenSaturation}%
               </Typography>
               <Typography variant="caption" sx={{ color: spo2Eval.color, fontWeight: 600, display: 'block' }}>
@@ -291,14 +291,14 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
                   label={latestVital.bodyTemperature <= 99.1 ? 'Normal' : 'Feverish'}
                   size="small"
                   sx={{
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: '0.72rem',
                     backgroundColor: latestVital.bodyTemperature <= 99.1 ? '#dcfce7' : '#fee2e2',
                     color: latestVital.bodyTemperature <= 99.1 ? '#15803d' : '#dc2626',
                   }}
                 />
               </Box>
-              <Typography variant="h4" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>
+              <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                 {latestVital.bodyTemperature}°F
               </Typography>
               <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600, display: 'block' }}>
@@ -326,14 +326,14 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
                   label={bmiEval.label}
                   size="small"
                   sx={{
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: '0.72rem',
                     backgroundColor: bmiEval.status === 'normal' ? '#dcfce7' : '#fef3c7',
                     color: bmiEval.color,
                   }}
                 />
               </Box>
-              <Typography variant="h4" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>
+              <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                 {latestVital.weightKg} kg
                 <Typography component="span" variant="body2" sx={{ color: '#64748b', ml: 1 }}>
                   (BMI {latestVital.bmi})
@@ -362,7 +362,7 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
               value={tabIndex}
               onChange={(_, val) => setTabIndex(val)}
               sx={{
-                '& .MuiTab-root': { fontWeight: 700, textTransform: 'none', fontSize: '1rem' },
+                '& .MuiTab-root': { fontWeight: 600, textTransform: 'none', fontSize: '1rem' },
               }}
             >
               <Tab icon={<Timeline />} iconPosition="start" label="Visual Trend Analysis" />
@@ -406,15 +406,15 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
               <Table size="small">
                 <TableHead sx={{ backgroundColor: '#f8fafc' }}>
                   <TableRow>
-                    <TableCell sx={{ fontWeight: 700 }}>Date & Time</TableCell>
-                    <TableCell sx={{ fontWeight: 700 }}>Blood Pressure</TableCell>
-                    <TableCell sx={{ fontWeight: 700 }}>Heart Rate</TableCell>
-                    <TableCell sx={{ fontWeight: 700 }}>Blood Glucose</TableCell>
-                    <TableCell sx={{ fontWeight: 700 }}>SpO2</TableCell>
-                    <TableCell sx={{ fontWeight: 700 }}>Temp</TableCell>
-                    <TableCell sx={{ fontWeight: 700 }}>Weight / BMI</TableCell>
-                    <TableCell sx={{ fontWeight: 700 }}>Notes</TableCell>
-                    <TableCell sx={{ fontWeight: 700, textAlign: 'right' }}>Action</TableCell>
+                    <TableCell sx={{ fontWeight: 600 }}>Date & Time</TableCell>
+                    <TableCell sx={{ fontWeight: 600 }}>Blood Pressure</TableCell>
+                    <TableCell sx={{ fontWeight: 600 }}>Heart Rate</TableCell>
+                    <TableCell sx={{ fontWeight: 600 }}>Blood Glucose</TableCell>
+                    <TableCell sx={{ fontWeight: 600 }}>SpO2</TableCell>
+                    <TableCell sx={{ fontWeight: 600 }}>Temp</TableCell>
+                    <TableCell sx={{ fontWeight: 600 }}>Weight / BMI</TableCell>
+                    <TableCell sx={{ fontWeight: 600 }}>Notes</TableCell>
+                    <TableCell sx={{ fontWeight: 600, textAlign: 'right' }}>Action</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -427,7 +427,7 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
                         <Chip
                           label={`${row.bloodPressureSystolic}/${row.bloodPressureDiastolic} mmHg`}
                           size="small"
-                          sx={{ fontWeight: 700, fontSize: '0.75rem' }}
+                          sx={{ fontWeight: 600, fontSize: '0.75rem' }}
                         />
                       </TableCell>
                       <TableCell>{row.heartRate} bpm</TableCell>
@@ -470,14 +470,14 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
             <HealthAndSafety sx={{ color: THEME_COLOR }} />
-            <Typography variant="h6" sx={{ fontWeight: 700, color: '#0f172a' }}>
+            <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a' }}>
               Standard Clinical Reference Thresholds
             </Typography>
           </Box>
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <Box sx={{ p: 2, backgroundColor: '#f8fafc', borderRadius: 2 }}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#0f172a', mb: 0.5 }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                   Blood Pressure (AHA)
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#475569', display: 'block', lineHeight: 1.6 }}>
@@ -491,7 +491,7 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
 
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <Box sx={{ p: 2, backgroundColor: '#f8fafc', borderRadius: 2 }}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#0f172a', mb: 0.5 }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                   Heart Rate / Pulse
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#475569', display: 'block', lineHeight: 1.6 }}>
@@ -505,7 +505,7 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
 
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <Box sx={{ p: 2, backgroundColor: '#f8fafc', borderRadius: 2 }}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#0f172a', mb: 0.5 }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                   Fasting Blood Glucose
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#475569', display: 'block', lineHeight: 1.6 }}>
@@ -519,7 +519,7 @@ export const VitalsPage: React.FC<VitalsPageProps> = ({
 
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <Box sx={{ p: 2, backgroundColor: '#f8fafc', borderRadius: 2 }}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#0f172a', mb: 0.5 }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                   Oxygen Saturation SpO2
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#475569', display: 'block', lineHeight: 1.6 }}>
