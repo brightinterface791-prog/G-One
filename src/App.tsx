@@ -108,6 +108,12 @@ export default function App() {
            return;
         }
 
+        if (hash === 'login' && currentUser) {
+          setCurrentPage('appointments');
+          window.history.replaceState(null, '', window.location.pathname + window.location.search + '#appointments');
+          return;
+        }
+
         if (validPages.includes(hash)) {
           setCurrentPage(hash as any);
         } else if (hash === 'home' || hash === '') {
@@ -133,7 +139,7 @@ export default function App() {
       return;
     }
     
-    const target = validPages.includes(page) ? (page as any) : 'home';
+    const target = page === 'login' && currentUser ? 'appointments' : validPages.includes(page) ? (page as any) : 'home';
     setCurrentPage(target);
     try {
       if (target !== 'home') {
@@ -205,7 +211,9 @@ export default function App() {
       localStorage.setItem('g_one_user', JSON.stringify(user));
     } catch (e) {}
     showToast(`Welcome back, ${user.name || 'Admin'}!`, 'success');
-    handleNavigate('appointments');
+    // Navigate directly: handleNavigate would still see the pre-login currentUser in this render.
+    setCurrentPage('appointments');
+    window.location.hash = 'appointments';
   };
 
   const handleLogout = () => {
