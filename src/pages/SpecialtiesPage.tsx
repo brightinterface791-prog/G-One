@@ -372,7 +372,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
             size="small"
             sx={{
               color: '#94a3b8',
-              borderRadius: '8px',
+              borderRadius: '9999px',
               '&:hover': { backgroundColor: '#f1f5f9', color: '#0f172a' },
             }}
           >
@@ -388,6 +388,8 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
             </Typography>
             <TextField
               fullWidth
+              size="small"
+              sx={{ '& .MuiOutlinedInput-root': { borderRadius: '9999px', minHeight: 44 } }}
               placeholder="e.g. Gastroenterology & Hepatology"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
@@ -400,6 +402,8 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
             </Typography>
             <TextField
               fullWidth
+              size="small"
+              sx={{ '& .MuiOutlinedInput-root': { borderRadius: '9999px', minHeight: 44 } }}
               placeholder="e.g. Digestive Health Institute (Wing C)"
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
@@ -414,6 +418,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
               fullWidth
               multiline
               rows={3}
+              sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }}
               placeholder="Describe clinical care, specialized diagnostics, and surgical offerings..."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -426,6 +431,8 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
             </Typography>
             <TextField
               fullWidth
+              size="small"
+              sx={{ '& .MuiOutlinedInput-root': { borderRadius: '9999px', minHeight: 44 } }}
               placeholder="e.g. Acid Reflux, Fatty Liver, IBS, Endoscopy, Crohn's"
               value={conditionsStr}
               onChange={(e) => setConditionsStr(e.target.value)}
@@ -440,7 +447,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
             sx={{
               color: '#475569',
               borderColor: '#cbd5e1',
-              borderRadius: '8px',
+              borderRadius: '9999px',
               px: 2.5,
               py: 0.8,
               '&:hover': {
@@ -458,7 +465,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
               backgroundColor: THEME_COLOR,
               color: '#ffffff',
               fontWeight: 600,
-              borderRadius: '8px',
+              borderRadius: '9999px',
               px: 3,
               py: 0.9,
               boxShadow: '0 4px 12px rgba(183, 3, 2, 0.25)',
@@ -534,7 +541,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
             sx={{
               color: '#64748b',
               borderColor: '#cbd5e1',
-              borderRadius: '8px',
+              borderRadius: '9999px',
               px: 2,
             }}
           >
@@ -551,7 +558,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
             }}
             sx={{
               fontWeight: 600,
-              borderRadius: '8px',
+              borderRadius: '9999px',
               px: 2.5,
               py: 0.8,
             }}
