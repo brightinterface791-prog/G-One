@@ -315,7 +315,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
         >
           {steps.map((label) => (
             <Step key={label}>
-              <StepLabel sx={{ '& .MuiStepLabel-label': { fontSize: '0.78rem', fontWeight: 700 } }}>
+              <StepLabel sx={{ '& .MuiStepLabel-label': { fontSize: '0.78rem', fontWeight: 600 } }}>
                 {label}
               </StepLabel>
             </Step>
@@ -396,19 +396,19 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                       <Avatar src={doc.avatar} alt={doc.name} sx={{ width: 52, height: 52, borderRadius: 2 }} />
                       <Box sx={{ flex: 1, minWidth: 0 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                          <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.88rem' }}>
+                          <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.88rem' }}>
                             {doc.name}
                           </Typography>
                           {isSelected && <CheckCircle sx={{ color: THEME_COLOR, fontSize: 18 }} />}
                         </Box>
-                        <Typography variant="caption" sx={{ color: THEME_COLOR, fontWeight: 700, display: 'block' }}>
+                        <Typography variant="caption" sx={{ color: THEME_COLOR, fontWeight: 600, display: 'block' }}>
                           {doc.specialty}
                         </Typography>
                         <Typography variant="caption" sx={{ color: '#64748b', display: 'block', fontSize: '0.74rem' }}>
                           {schedule?.roomChamber || doc.hospitalLocation}
                         </Typography>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
-                          <Typography variant="caption" sx={{ fontWeight: 700, color: '#16a34a' }}>
+                          <Typography variant="caption" sx={{ fontWeight: 600, color: '#16a34a' }}>
                             ${doc.consultationFee} Fee
                           </Typography>
                           <Typography variant="caption" sx={{ color: '#64748b' }}>
@@ -431,7 +431,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
             <Paper elevation={0} sx={{ p: 2, backgroundColor: '#f8fafc', borderRadius: 2.5, mb: 2.5, border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', gap: 2 }}>
               <Avatar src={selectedDoctor.avatar} alt={selectedDoctor.name} sx={{ width: 44, height: 44, borderRadius: 2 }} />
               <Box sx={{ flex: 1 }}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.9rem' }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.9rem' }}>
                   Attending Doctor: {selectedDoctor.name}
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#64748b', display: 'block' }}>
@@ -441,11 +441,11 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                   Hours: {selectedDoctor.sittingSchedule?.shiftMorning || '09:00 AM - 01:00 PM'}
                 </Typography>
               </Box>
-              <Chip label={`$${selectedDoctor.consultationFee} Fee`} color="primary" sx={{ fontWeight: 700, height: 24, fontSize: '0.75rem' }} />
+              <Chip label={`$${selectedDoctor.consultationFee} Fee`} color="primary" sx={{ fontWeight: 600, height: 24, fontSize: '0.75rem' }} />
             </Paper>
 
             {/* Consultation Mode */}
-            <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a', mb: 1, fontSize: '0.85rem' }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 1, fontSize: '0.85rem' }}>
               1. Select Clinical Consultation Modality
             </Typography>
             <Grid container spacing={1.5} sx={{ mb: 2.5 }}>
@@ -472,7 +472,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                       }}
                     >
                       <Box sx={{ color: isSelected ? THEME_COLOR : '#64748b', mb: 0.5 }}>{mode.icon}</Box>
-                      <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a', fontSize: '0.8rem' }}>
+                      <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.8rem' }}>
                         {mode.label}
                       </Typography>
                       <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.72rem', display: 'block' }}>
@@ -485,7 +485,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
             </Grid>
 
             {/* Date Selection */}
-            <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a', mb: 1, fontSize: '0.85rem' }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 1, fontSize: '0.85rem' }}>
               2. Select Appointment Date
             </Typography>
             <Box sx={{ display: 'flex', gap: 1, overflowX: 'auto', pb: 1, mb: 2.5 }}>
@@ -511,7 +511,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                     <Typography variant="caption" sx={{ display: 'block', fontWeight: 600, color: isSelected ? '#fecaca' : '#64748b', fontSize: '0.72rem' }}>
                       {item.dayName}
                     </Typography>
-                    <Typography variant="h6" sx={{ fontWeight: 800, lineHeight: 1.1, fontSize: '1.1rem' }}>
+                    <Typography variant="h6" sx={{ fontWeight: 600, lineHeight: 1.1, fontSize: '1.1rem' }}>
                       {item.dayNumber}
                     </Typography>
                     <Typography variant="caption" sx={{ display: 'block', fontSize: '0.68rem', color: isSelected ? '#ffffff' : '#64748b' }}>
@@ -523,7 +523,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
             </Box>
 
             {/* Time Slot Selection */}
-            <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a', mb: 1, fontSize: '0.85rem' }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 1, fontSize: '0.85rem' }}>
               3. Available OPD Time Slots ({selectedDoctor.sittingSchedule?.slotDurationMinutes || 20}m duration)
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
@@ -537,7 +537,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                     onClick={() => setSelectedTimeSlot(slot)}
                     sx={{
                       p: 1,
-                      fontWeight: 700,
+                      fontWeight: 600,
                       borderRadius: 2,
                       fontSize: '0.76rem',
                       border: isSelected ? `2px solid ${THEME_COLOR}` : '1px solid #e2e8f0',
@@ -557,7 +557,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
         {/* STEP 2: Patient Info & Dynamic Intake Questions */}
         {activeStep === 2 && (
           <Box>
-            <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a', mb: 1.5, fontSize: '0.9rem' }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 1.5, fontSize: '0.9rem' }}>
               A. Patient Demographics
             </Typography>
 
@@ -653,10 +653,10 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
             {activeDynamicFields.length > 0 && (
               <Box sx={{ mt: 3, pt: 2.5, borderTop: '1px solid #e2e8f0' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1.5 }}>
-                  <Typography variant="subtitle2" sx={{ fontWeight: 800, color: THEME_COLOR, fontSize: '0.88rem' }}>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600, color: THEME_COLOR, fontSize: '0.88rem' }}>
                     B. Hospital Dynamic Intake Questionnaire ({selectedDoctor.name})
                   </Typography>
-                  <Chip label="Required for OPD" size="small" sx={{ height: 18, fontSize: '0.65rem', fontWeight: 700 }} />
+                  <Chip label="Required for OPD" size="small" sx={{ height: 18, fontSize: '0.65rem', fontWeight: 600 }} />
                 </Box>
 
                 <Grid container spacing={2}>
@@ -665,7 +665,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                     return (
                       <Grid size={{ xs: 12, sm: field.type === 'textarea' ? 12 : 6 }} key={field.id}>
                         <Box>
-                          <Typography variant="caption" sx={{ fontWeight: 700, color: '#334155', display: 'block', mb: 0.4 }}>
+                          <Typography variant="caption" sx={{ fontWeight: 600, color: '#334155', display: 'block', mb: 0.4 }}>
                             {field.label} {field.required && <span style={{ color: '#dc2626' }}>*</span>}
                           </Typography>
 
@@ -785,7 +785,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
               <CheckCircle sx={{ fontSize: 38 }} />
             </Box>
 
-            <Typography variant="h5" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5, fontSize: '1.25rem' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5, fontSize: '1.25rem' }}>
               Consultation Successfully Scheduled!
             </Typography>
 
@@ -812,11 +812,11 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                   <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600 }}>
                     REGISTRATION TOKEN
                   </Typography>
-                  <Typography variant="subtitle1" sx={{ fontWeight: 900, color: THEME_COLOR }}>
+                  <Typography variant="subtitle1" sx={{ fontWeight: 600, color: THEME_COLOR }}>
                     {confirmedAppointment.bookingRef}
                   </Typography>
                 </Box>
-                <Chip label="CONFIRMED OPD" color="success" size="small" sx={{ fontWeight: 700, fontSize: '0.7rem' }} />
+                <Chip label="CONFIRMED OPD" color="success" size="small" sx={{ fontWeight: 600, fontSize: '0.7rem' }} />
               </Box>
 
               <Grid container spacing={1.5}>
@@ -824,7 +824,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                   <Typography variant="caption" sx={{ color: '#64748b' }}>
                     Attending Physician
                   </Typography>
-                  <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a', fontSize: '0.84rem' }}>
+                  <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.84rem' }}>
                     {confirmedAppointment.doctorName}
                   </Typography>
                   <Typography variant="caption" sx={{ color: THEME_COLOR, fontWeight: 600 }}>
@@ -836,7 +836,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                   <Typography variant="caption" sx={{ color: '#64748b' }}>
                     Schedule & Time
                   </Typography>
-                  <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a', fontSize: '0.84rem' }}>
+                  <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.84rem' }}>
                     {confirmedAppointment.date}
                   </Typography>
                   <Typography variant="caption" sx={{ color: '#0f172a', fontWeight: 600 }}>
@@ -848,7 +848,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                   <Typography variant="caption" sx={{ color: '#64748b' }}>
                     Patient
                   </Typography>
-                  <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a', fontSize: '0.84rem' }}>
+                  <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.84rem' }}>
                     {confirmedAppointment.patientName} ({confirmedAppointment.patientAge}y, {confirmedAppointment.patientGender})
                   </Typography>
                 </Grid>
@@ -857,7 +857,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                   <Typography variant="caption" sx={{ color: '#64748b' }}>
                     OPD Chamber Room
                   </Typography>
-                  <Typography variant="body2" sx={{ fontWeight: 700, color: '#334155', fontSize: '0.84rem' }}>
+                  <Typography variant="body2" sx={{ fontWeight: 600, color: '#334155', fontSize: '0.84rem' }}>
                     {confirmedAppointment.chamberRoom || selectedDoctor.hospitalLocation}
                   </Typography>
                 </Grid>
@@ -870,7 +870,7 @@ export const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                 onClick={handleResetAndClose}
                 sx={{
                   backgroundColor: THEME_COLOR,
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: '0.82rem',
                   textTransform: 'none',
                   borderRadius: '9999px',
