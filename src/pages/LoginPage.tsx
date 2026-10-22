@@ -142,7 +142,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
               <Typography
                 variant="h4"
                 sx={{
-                  fontWeight: 800,
+                  fontWeight: 600,
                   color: '#0f172a',
                   fontSize: { xs: '1.75rem', sm: '2rem' },
                   letterSpacing: '-0.025em',
