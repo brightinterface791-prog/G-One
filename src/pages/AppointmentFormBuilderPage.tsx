@@ -290,11 +290,9 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flex: 1, width: { xs: '100%', sm: 'auto' } }}>
               <FormControl size="small" sx={{ minWidth: { xs: '100%', sm: 320 } }}>
-                <InputLabel id="select-doctor-form-label">Select Doctor to Customize</InputLabel>
                 <Select
-                  labelId="select-doctor-form-label"
                   value={selectedDoctorId}
-                  label="Select Doctor to Customize"
+                  inputProps={{ "aria-label": "Select Doctor to Customize" }}
                   onChange={(e) => setSelectedDoctorId(e.target.value)}
                 >
                   {doctors.map((doc) => (
@@ -761,7 +759,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
             size="small"
             sx={{
               color: '#94a3b8',
-              borderRadius: '8px',
+              borderRadius: '9999px',
               '&:hover': { backgroundColor: '#f1f5f9', color: '#0f172a' },
             }}
           >
@@ -986,7 +984,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                 Live Patient View Preview
               </Typography>
             </Box>
-            <Box sx={{ backgroundColor: '#ffffff', p: 2, borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+            <Box sx={{ backgroundColor: '#ffffff', p: 2, borderRadius: '9999px', border: '1px solid #e2e8f0' }}>
               <Typography sx={{ fontSize: '13.5px', fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                 {label || 'Sample Question Label'}
                 {required && (
@@ -1070,7 +1068,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
             sx={{
               color: '#475569',
               borderColor: '#cbd5e1',
-              borderRadius: '8px',
+              borderRadius: '9999px',
               px: 2.5,
               py: 1,
               '&:hover': {
@@ -1088,7 +1086,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
               backgroundColor: THEME_COLOR,
               color: '#ffffff',
               fontWeight: 600,
-              borderRadius: '8px',
+              borderRadius: '9999px',
               px: 3,
               py: 1,
               boxShadow: '0 4px 12px rgba(183, 3, 2, 0.25)',
