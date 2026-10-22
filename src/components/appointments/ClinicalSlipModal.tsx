@@ -122,7 +122,7 @@ G-One Hospital Digital Health System
       >
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <LocalHospital sx={{ color: THEME_COLOR, fontSize: 20 }} />
-          <Typography variant="subtitle2" sx={{ fontWeight: 800 }}>
+          <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
             Electronic Clinical Slip & Rx Prescription
           </Typography>
         </Box>
@@ -137,7 +137,7 @@ G-One Hospital Digital Health System
               color: '#ffffff',
               borderColor: '#475569',
               textTransform: 'none',
-              fontWeight: 700,
+              fontWeight: 600,
               '&:hover': { borderColor: '#ffffff', backgroundColor: 'rgba(255,255,255,0.05)' },
             }}
           >
@@ -152,7 +152,7 @@ G-One Hospital Digital Health System
               backgroundColor: THEME_COLOR,
               color: '#ffffff',
               textTransform: 'none',
-              fontWeight: 700,
+              fontWeight: 600,
               '&:hover': { backgroundColor: '#900201' },
             }}
           >
@@ -190,14 +190,14 @@ G-One Hospital Digital Health System
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontWeight: 900,
+                  fontWeight: 600,
                   fontSize: '1.2rem',
                 }}
               >
                 +
               </Box>
               <Box>
-                <Typography variant="h6" sx={{ fontWeight: 900, color: '#0f172a', lineHeight: 1.1 }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', lineHeight: 1.1 }}>
                   G-ONE SUPER-SPECIALTY HOSPITAL
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600 }}>
@@ -213,7 +213,7 @@ G-One Hospital Digital Health System
               <Typography variant="caption" sx={{ color: '#64748b', display: 'block' }}>
                 Slip Reference ID:
               </Typography>
-              <Typography variant="subtitle2" sx={{ fontWeight: 900, color: THEME_COLOR, letterSpacing: '0.04em' }}>
+              <Typography variant="subtitle2" sx={{ fontWeight: 600, color: THEME_COLOR, letterSpacing: '0.04em' }}>
                 {appointment.bookingRef}
               </Typography>
               <Typography variant="caption" sx={{ color: '#475569', fontWeight: 600 }}>
@@ -226,10 +226,10 @@ G-One Hospital Digital Health System
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, py: 2.5, borderBottom: '1px solid #e2e8f0' }}>
             {/* Patient Details */}
             <Box sx={{ p: 1.8, borderRadius: 2, backgroundColor: '#f8fafc', border: '1px solid #edf2f7' }}>
-              <Typography variant="caption" sx={{ color: THEME_COLOR, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <Typography variant="caption" sx={{ color: THEME_COLOR, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 PATIENT DEMOGRAPHICS
               </Typography>
-              <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#0f172a', mt: 0.5 }}>
+              <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#0f172a', mt: 0.5 }}>
                 {appointment.patientName}
               </Typography>
               <Typography variant="body2" sx={{ color: '#475569', fontSize: '0.82rem' }}>
@@ -245,10 +245,10 @@ G-One Hospital Digital Health System
 
             {/* Doctor Details */}
             <Box sx={{ p: 1.8, borderRadius: 2, backgroundColor: '#f8fafc', border: '1px solid #edf2f7' }}>
-              <Typography variant="caption" sx={{ color: THEME_COLOR, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <Typography variant="caption" sx={{ color: THEME_COLOR, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 ATTENDING CLINICIAN
               </Typography>
-              <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#0f172a', mt: 0.5 }}>
+              <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#0f172a', mt: 0.5 }}>
                 {appointment.doctorName}
               </Typography>
               <Typography variant="body2" sx={{ color: '#475569', fontSize: '0.82rem' }}>
@@ -258,39 +258,39 @@ G-One Hospital Digital Health System
                 <strong>Modality:</strong> {appointment.consultationType} (Room / Node)
               </Typography>
               <Typography variant="body2" sx={{ color: '#475569', fontSize: '0.82rem' }}>
-                <strong>Status:</strong> <span style={{ color: '#16a34a', fontWeight: 700 }}>{appointment.status}</span>
+                <strong>Status:</strong> <span style={{ color: '#16a34a', fontWeight: 600 }}>{appointment.status}</span>
               </Typography>
             </Box>
           </Box>
 
           {/* Vitals Recorded Strip */}
           <Box sx={{ py: 2, borderBottom: '1px solid #e2e8f0' }}>
-            <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', mb: 1 }}>
+            <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', mb: 1 }}>
               CLINICAL VITALS AT INTAKE
             </Typography>
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))', gap: 1.5 }}>
               <Box sx={{ p: 1, backgroundColor: '#f1f5f9', borderRadius: 1.5, textAlign: 'center' }}>
                 <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.7rem' }}>Blood Pressure</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a' }}>120/80 mmHg</Typography>
+                <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>120/80 mmHg</Typography>
               </Box>
               <Box sx={{ p: 1, backgroundColor: '#f1f5f9', borderRadius: 1.5, textAlign: 'center' }}>
                 <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.7rem' }}>Pulse / Heart Rate</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a' }}>72 bpm</Typography>
+                <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>72 bpm</Typography>
               </Box>
               <Box sx={{ p: 1, backgroundColor: '#f1f5f9', borderRadius: 1.5, textAlign: 'center' }}>
                 <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.7rem' }}>Oxygen (SpO2)</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a' }}>99%</Typography>
+                <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>99%</Typography>
               </Box>
               <Box sx={{ p: 1, backgroundColor: '#f1f5f9', borderRadius: 1.5, textAlign: 'center' }}>
                 <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.7rem' }}>Temperature</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a' }}>98.6°F</Typography>
+                <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>98.6°F</Typography>
               </Box>
             </Box>
           </Box>
 
           {/* Chief Complaint & Diagnosis */}
           <Box sx={{ py: 2, borderBottom: '1px solid #e2e8f0' }}>
-            <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               CHIEF COMPLAINT / SYMPTOMS
             </Typography>
             <Typography variant="body2" sx={{ color: '#1e293b', fontWeight: 600, mt: 0.5 }}>
@@ -306,10 +306,10 @@ G-One Hospital Digital Health System
           {/* Prescribed Medications (Rx Table) */}
           <Box sx={{ py: 2 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-              <Typography variant="h6" sx={{ fontWeight: 900, color: THEME_COLOR }}>
+              <Typography variant="h6" sx={{ fontWeight: 600, color: THEME_COLOR }}>
                 ℞
               </Typography>
-              <Typography variant="caption" sx={{ color: '#0f172a', fontWeight: 800, textTransform: 'uppercase' }}>
+              <Typography variant="caption" sx={{ color: '#0f172a', fontWeight: 600, textTransform: 'uppercase' }}>
                 PRESCRIBED MEDICATIONS & REGIMEN
               </Typography>
             </Box>
@@ -317,17 +317,17 @@ G-One Hospital Digital Health System
             <Table size="small" sx={{ border: '1px solid #e2e8f0', borderRadius: 1.5, overflow: 'hidden' }}>
               <TableHead sx={{ backgroundColor: '#f8fafc' }}>
                 <TableRow>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.75rem', color: '#475569' }}>#</TableCell>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.75rem', color: '#475569' }}>Medicine Name</TableCell>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.75rem', color: '#475569' }}>Dosage & Timing</TableCell>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.75rem', color: '#475569' }}>Duration</TableCell>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.75rem', color: '#475569' }}>Instructions</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.75rem', color: '#475569' }}>#</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.75rem', color: '#475569' }}>Medicine Name</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.75rem', color: '#475569' }}>Dosage & Timing</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.75rem', color: '#475569' }}>Duration</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.75rem', color: '#475569' }}>Instructions</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 700 }}>1</TableCell>
-                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 700, color: '#0f172a' }}>
+                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 600 }}>1</TableCell>
+                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 600, color: '#0f172a' }}>
                     Tab. Paracetamol 650mg
                   </TableCell>
                   <TableCell sx={{ fontSize: '0.8rem', color: '#475569' }}>1 Tablet TDS (Thrice daily)</TableCell>
@@ -335,8 +335,8 @@ G-One Hospital Digital Health System
                   <TableCell sx={{ fontSize: '0.8rem', color: '#475569' }}>Post meals with water</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 700 }}>2</TableCell>
-                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 700, color: '#0f172a' }}>
+                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 600 }}>2</TableCell>
+                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 600, color: '#0f172a' }}>
                     Cap. Multivitamin & Zinc Forte
                   </TableCell>
                   <TableCell sx={{ fontSize: '0.8rem', color: '#475569' }}>1 Capsule OD (Once daily)</TableCell>
@@ -344,8 +344,8 @@ G-One Hospital Digital Health System
                   <TableCell sx={{ fontSize: '0.8rem', color: '#475569' }}>Post breakfast</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 700 }}>3</TableCell>
-                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 700, color: '#0f172a' }}>
+                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 600 }}>3</TableCell>
+                  <TableCell sx={{ fontSize: '0.8rem', fontWeight: 600, color: '#0f172a' }}>
                     Electrolyte Hydration Sachet
                   </TableCell>
                   <TableCell sx={{ fontSize: '0.8rem', color: '#475569' }}>1 sachet in 500ml water</TableCell>
@@ -359,15 +359,15 @@ G-One Hospital Digital Health System
           {/* Advice & Signature Footer */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', pt: 3, mt: 2, borderTop: '1px solid #e2e8f0', flexWrap: 'wrap', gap: 2 }}>
             <Box>
-              <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 700, display: 'block' }}>
+              <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600, display: 'block' }}>
                 Next Review / Follow-Up:
               </Typography>
-              <Typography variant="body2" sx={{ color: '#0f172a', fontWeight: 700 }}>
+              <Typography variant="body2" sx={{ color: '#0f172a', fontWeight: 600 }}>
                 After 14 Days or SOS in case of acute distress.
               </Typography>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mt: 0.5, color: '#15803d' }}>
                 <VerifiedUser sx={{ fontSize: 16 }} />
-                <Typography variant="caption" sx={{ fontWeight: 700, fontSize: '0.7rem' }}>
+                <Typography variant="caption" sx={{ fontWeight: 600, fontSize: '0.7rem' }}>
                   Authenticated Digital EHR Slip • Valid without physical seal
                 </Typography>
               </Box>
@@ -375,12 +375,12 @@ G-One Hospital Digital Health System
 
             <Box sx={{ textAlign: 'right', minWidth: 180 }}>
               <Box sx={{ height: 36, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-                <Typography sx={{ fontFamily: 'cursive', color: THEME_COLOR, fontWeight: 700, fontSize: '1.2rem' }}>
+                <Typography sx={{ fontFamily: 'cursive', color: THEME_COLOR, fontWeight: 600, fontSize: '1.2rem' }}>
                   {appointment.doctorName}
                 </Typography>
               </Box>
               <Divider sx={{ my: 0.5, borderColor: '#cbd5e1' }} />
-              <Typography variant="caption" sx={{ fontWeight: 800, color: '#0f172a', display: 'block' }}>
+              <Typography variant="caption" sx={{ fontWeight: 600, color: '#0f172a', display: 'block' }}>
                 {appointment.doctorName}
               </Typography>
               <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.68rem', display: 'block' }}>
