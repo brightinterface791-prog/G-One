@@ -701,6 +701,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
         fullWidth
         slotProps={{
           paper: {
+            className: 'faculty-onboarding-dialog',
             sx: {
               borderRadius: 3,
               overflow: 'hidden',
@@ -949,21 +950,21 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                       <Button
                         size="small"
                         onClick={() => applyDayPreset('weekdays')}
-                        sx={{ fontSize: '0.64rem', textTransform: 'none', py: 0.2, px: 0.8, color: '#475569', backgroundColor: '#f1f5f9', borderRadius: 1 }}
+                        sx={{ fontSize: '0.64rem', textTransform: 'none', py: 0.2, px: 0.8, color: '#475569', backgroundColor: '#f1f5f9', borderRadius: 9999 }}
                       >
                         Mon-Fri
                       </Button>
                       <Button
                         size="small"
                         onClick={() => applyDayPreset('mon-sat')}
-                        sx={{ fontSize: '0.64rem', textTransform: 'none', py: 0.2, px: 0.8, color: '#475569', backgroundColor: '#f1f5f9', borderRadius: 1 }}
+                        sx={{ fontSize: '0.64rem', textTransform: 'none', py: 0.2, px: 0.8, color: '#475569', backgroundColor: '#f1f5f9', borderRadius: 9999 }}
                       >
                         Mon-Sat
                       </Button>
                       <Button
                         size="small"
                         onClick={() => applyDayPreset('all')}
-                        sx={{ fontSize: '0.64rem', textTransform: 'none', py: 0.2, px: 0.8, color: '#475569', backgroundColor: '#f1f5f9', borderRadius: 1 }}
+                        sx={{ fontSize: '0.64rem', textTransform: 'none', py: 0.2, px: 0.8, color: '#475569', backgroundColor: '#f1f5f9', borderRadius: 9999 }}
                       >
                         All 7 Days
                       </Button>
@@ -981,6 +982,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                           onClick={() => toggleNewDocDay(day)}
                           size="small"
                           sx={{
+                            borderRadius: '9999px',
                             fontWeight: 700,
                             fontSize: '0.72rem',
                             cursor: 'pointer',
@@ -1235,7 +1237,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
               sx={{
                 color: '#475569',
                 borderColor: '#cbd5e1',
-                borderRadius: '8px',
+                borderRadius: '9999px',
                 px: 2.5,
                 py: 0.8,
                 '&:hover': {
@@ -1254,7 +1256,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                 backgroundColor: THEME_COLOR,
                 color: '#ffffff',
                 fontWeight: 600,
-                borderRadius: '8px',
+                borderRadius: '9999px',
                 px: 3,
                 py: 0.9,
                 boxShadow: '0 4px 12px rgba(183, 3, 2, 0.25)',
