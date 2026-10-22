@@ -171,7 +171,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
             display: { xs: 'none', lg: 'inline-flex' },
             backgroundColor: 'rgba(34, 197, 94, 0.1)',
             color: '#15803d',
-            fontWeight: 700,
+            fontWeight: 600,
             fontSize: '0.72rem',
             borderRadius: '9999px',
             border: '1px solid rgba(34, 197, 94, 0.2)',
@@ -222,7 +222,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
           }}
         >
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 1 }}>
-            <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a' }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a' }}>
               Notifications
             </Typography>
             <Chip
@@ -231,7 +231,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
               sx={{
                 backgroundColor: 'rgba(183, 3, 2, 0.1)',
                 color: THEME_COLOR,
-                fontWeight: 700,
+                fontWeight: 600,
                 fontSize: '0.7rem',
               }}
             />
@@ -255,7 +255,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
                 }}
               >
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', mb: 0.4 }}>
-                  <Typography variant="caption" sx={{ fontWeight: 800, color: '#0f172a' }}>
+                  <Typography variant="caption" sx={{ fontWeight: 600, color: '#0f172a' }}>
                     {notif.title}
                   </Typography>
                   <Typography variant="caption" sx={{ color: '#94a3b8', fontSize: '0.68rem' }}>
@@ -273,7 +273,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
             fullWidth
             size="small"
             onClick={() => setNotifAnchor(null)}
-            sx={{ textTransform: 'none', fontWeight: 700, color: THEME_COLOR, fontSize: '0.78rem' }}
+            sx={{ textTransform: 'none', fontWeight: 600, color: THEME_COLOR, fontSize: '0.78rem' }}
           >
             Mark All as Read
           </Button>
@@ -305,7 +305,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
               height: 34,
               backgroundColor: THEME_COLOR,
               color: '#ffffff',
-              fontWeight: 800,
+              fontWeight: 600,
               fontSize: '0.85rem',
             }}
           >
@@ -315,7 +315,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
             <Typography
               variant="body2"
               sx={{
-                fontWeight: 800,
+                fontWeight: 600,
                 color: '#0f172a',
                 lineHeight: 1.1,
                 fontSize: '0.86rem',
@@ -358,7 +358,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
           }}
         >
           <Box sx={{ px: 2, py: 1.5 }}>
-            <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a' }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a' }}>
               {currentUser.name}
             </Typography>
             <Typography variant="caption" sx={{ color: '#64748b' }}>
@@ -403,7 +403,7 @@ export const PanelHeader: React.FC<PanelHeaderProps> = ({
             sx={{
               borderRadius: '8px',
               fontSize: '0.86rem',
-              fontWeight: 700,
+              fontWeight: 600,
               color: '#dc2626',
               '&:hover': {
                 backgroundColor: 'rgba(220, 38, 38, 0.08)',
