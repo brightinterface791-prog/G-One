@@ -300,3 +300,31 @@ select:not(.MuiSelect-select):not(.custom-select-chevron) {
 .faculty-onboarding-dialog .MuiSelect-icon {
   right: 20px !important;
 }
+
+/* Doctor sign-in: prevent Chrome's autofill blue fill from creating an
+   inset capsule and keep the input transparent inside the 56px pill shell. */
+input.gone-login-input,
+input.gone-login-input:focus {
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input.gone-login-input:-webkit-autofill,
+input.gone-login-input:-webkit-autofill:hover,
+input.gone-login-input:-webkit-autofill:focus,
+input.gone-login-input:autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #1e293b !important;
+  caret-color: #1e293b;
+  background-color: #ffffff !important;
+  border-radius: 0 !important;
+  transition: background-color 9999s ease-out 0s;
+}
