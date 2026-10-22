@@ -759,10 +759,18 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                   </Box>
 
                   <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.8 }}>
+                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Doctor Full Name</Typography>
+                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Qualifications</Typography>
+                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>OPD Chamber Room</Typography>
+                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Consultation Fee ($)</Typography>
+                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Experience (Years)</Typography>
+                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Morning Shift</Typography>
+                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Evening Shift</Typography>
+                    <Typography component="label" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#475569' }}>Clinical Profile Summary</Typography>
                     <TextField
                       fullWidth
                       size="small"
-                      label="Doctor Full Name"
+                      inputProps={{ "aria-label": "Doctor Full Name" }}
                       placeholder="e.g. Dr. Robert Chen, MD"
                       value={newDocName}
                       onChange={(e) => setNewDocName(e.target.value)}
@@ -781,11 +789,10 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                     <Grid container spacing={1.5}>
                       <Grid size={{ xs: 12, sm: 6 }}>
                         <FormControl fullWidth size="small">
-                          <InputLabel id="new-doctor-specialty-label">Specialty Department</InputLabel>
+                          <Typography component="label" sx={{ display: "block", mb: 0.75, fontSize: 13, fontWeight: 500, color: "#475569" }}>Specialty Department</Typography>
                           <Select
-                            labelId="new-doctor-specialty-label"
+                            inputProps={{ "aria-label": "Specialty Department" }}
                             value={newDocSpecialty}
-                            label="Specialty Department"
                             onChange={(e) => setNewDocSpecialty(e.target.value)}
                             startAdornment={
                               <InputAdornment position="start">
@@ -806,7 +813,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                         <TextField
                           fullWidth
                           size="small"
-                          label="Qualifications"
+                          inputProps={{ "aria-label": "Qualifications" }}
                           placeholder="e.g. MD, DM, FACC"
                           value={newDocQualification}
                           onChange={(e) => setNewDocQualification(e.target.value)}
@@ -839,7 +846,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                       <TextField
                         fullWidth
                         size="small"
-                        label="OPD Chamber Room"
+                        inputProps={{ "aria-label": "OPD Chamber Room" }}
                         placeholder="e.g. Chamber 205, Main Block"
                         value={newDocChamber}
                         onChange={(e) => setNewDocChamber(e.target.value)}
@@ -860,7 +867,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                         fullWidth
                         type="number"
                         size="small"
-                        label="Consultation Fee ($)"
+                        inputProps={{ "aria-label": "Consultation Fee ($)" }}
                         value={newDocFee}
                         onChange={(e) => setNewDocFee(Number(e.target.value))}
                         slotProps={{
@@ -880,7 +887,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                         fullWidth
                         type="number"
                         size="small"
-                        label="Experience (Years)"
+                        inputProps={{ "aria-label": "Experience (Years)" }}
                         value={newDocExp}
                         onChange={(e) => setNewDocExp(Number(e.target.value))}
                         slotProps={{
@@ -973,7 +980,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                       <TextField
                         fullWidth
                         size="small"
-                        label="Morning Shift"
+                        inputProps={{ "aria-label": "Morning Shift" }}
                         value={newDocShiftMorning}
                         onChange={(e) => setNewDocShiftMorning(e.target.value)}
                         placeholder="09:00 AM - 01:00 PM"
@@ -992,7 +999,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                       <TextField
                         fullWidth
                         size="small"
-                        label="Evening Shift"
+                        inputProps={{ "aria-label": "Evening Shift" }}
                         value={newDocShiftEvening}
                         onChange={(e) => setNewDocShiftEvening(e.target.value)}
                         placeholder="03:00 PM - 06:30 PM"
@@ -1024,7 +1031,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                     multiline
                     rows={2.5}
                     size="small"
-                    label="Clinical Profile Summary"
+                    inputProps={{ "aria-label": "Clinical Profile Summary" }}
                     placeholder="Clinical interests, sub-specialty focus, diagnostic procedures, fellowship achievements..."
                     value={newDocAbout}
                     onChange={(e) => setNewDocAbout(e.target.value)}
