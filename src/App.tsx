@@ -212,12 +212,12 @@ export default function App() {
   };
 
   const handleLogout = () => {
+    authSession.clear();
     setCurrentUser(null);
-    try {
-      localStorage.removeItem('g_one_user');
-    } catch (e) {}
     showToast('Logged out of hospital administrator panel.', 'info');
-    handleNavigate('login');
+    // Avoid the stale authenticated state in handleNavigate during this render.
+    setCurrentPage('login');
+    window.location.hash = 'login';
   };
 
   const renderPageContent = () => (
