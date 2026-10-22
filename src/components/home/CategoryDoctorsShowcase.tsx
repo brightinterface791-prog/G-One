@@ -96,7 +96,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
                 variant="overline"
                 sx={{
                   color: THEME_COLOR,
-                  fontWeight: 800,
+                  fontWeight: 600,
                   letterSpacing: '0.08em',
                   fontSize: '0.75rem',
                 }}
@@ -108,7 +108,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
               variant="h3"
               sx={{
                 fontSize: { xs: '1.65rem', sm: '2rem', md: '2.35rem' },
-                fontWeight: 800,
+                fontWeight: 600,
                 color: '#0f172a',
                 letterSpacing: '-0.02em',
                 lineHeight: 1.2,
@@ -154,7 +154,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
           >
             <Typography
               sx={{
-                fontWeight: 700,
+                fontWeight: 600,
                 fontSize: '0.92rem',
                 lineHeight: 1.2,
               }}
@@ -218,7 +218,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
                   component="span"
                   sx={{
                     fontSize: '0.72rem',
-                    fontWeight: 700,
+                    fontWeight: 600,
                     px: 0.8,
                     py: 0.1,
                     borderRadius: '10px',
@@ -285,7 +285,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
                       sx={{
                         backgroundColor: 'rgba(183, 3, 2, 0.08)',
                         color: THEME_COLOR,
-                        fontWeight: 700,
+                        fontWeight: 600,
                         fontSize: '0.68rem',
                         height: 20,
                         mb: 0.4,
@@ -294,7 +294,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
                     <Typography
                       variant="subtitle2"
                       sx={{
-                        fontWeight: 800,
+                        fontWeight: 600,
                         color: '#0f172a',
                         fontSize: '0.96rem',
                         lineHeight: 1.25,
@@ -344,7 +344,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
                 >
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <Star sx={{ color: '#eab308', fontSize: 17 }} />
-                    <Typography variant="caption" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.82rem' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.82rem' }}>
                       {doc.rating}
                     </Typography>
                     <Typography variant="caption" sx={{ color: '#94a3b8', fontSize: '0.74rem' }}>
@@ -407,7 +407,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
                       backgroundColor: THEME_COLOR,
                       color: '#ffffff',
                       textTransform: 'none',
-                      fontWeight: 700,
+                      fontWeight: 600,
                       borderRadius: '8px',
                       boxShadow: 'none',
                       '&:hover': {
@@ -461,7 +461,7 @@ export const CategoryDoctorsShowcase: React.FC<CategoryDoctorsShowcaseProps> = (
             <Typography
               className="view-more-text"
               sx={{
-                fontWeight: 700,
+                fontWeight: 600,
                 fontSize: '0.94rem',
                 lineHeight: 1.2,
               }}
