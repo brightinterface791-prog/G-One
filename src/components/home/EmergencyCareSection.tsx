@@ -51,13 +51,13 @@ export const EmergencyCareSection: React.FC<EmergencyCareSectionProps> = ({ onOp
                   sx={{
                     backgroundColor: THEME_COLOR,
                     color: '#ffffff',
-                    fontWeight: 700,
+                    fontWeight: 600,
                     fontSize: '0.75rem',
                   }}
                 />
               </Box>
 
-              <Typography variant="h3" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 800, color: '#0f172a', mb: 1.5 }}>
+              <Typography variant="h3" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
                 Critical Emergency or Sudden Chest Pain?
               </Typography>
 
@@ -114,13 +114,13 @@ export const EmergencyCareSection: React.FC<EmergencyCareSectionProps> = ({ onOp
                 }}
               >
                 <PhoneInTalk sx={{ fontSize: 44, color: '#ffffff', mb: 1 }} />
-                <Typography variant="caption" sx={{ color: '#fecaca', fontWeight: 700, letterSpacing: '0.08em', display: 'block' }}>
+                <Typography variant="caption" sx={{ color: '#fecaca', fontWeight: 600, letterSpacing: '0.08em', display: 'block' }}>
                   24/7 TOLL-FREE EMERGENCY HOTLINE
                 </Typography>
                 <Typography
                   variant="h3"
                   sx={{
-                    fontWeight: 900,
+                    fontWeight: 600,
                     color: '#ffffff',
                     my: 1,
                     letterSpacing: '-0.02em',
@@ -140,7 +140,7 @@ export const EmergencyCareSection: React.FC<EmergencyCareSectionProps> = ({ onOp
                   sx={{
                     backgroundColor: '#ffffff',
                     color: THEME_COLOR,
-                    fontWeight: 800,
+                    fontWeight: 600,
                     py: 1.3,
                     '&:hover': {
                       backgroundColor: '#f8fafc',
