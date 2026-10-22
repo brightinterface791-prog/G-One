@@ -165,3 +165,23 @@
     color: #475569 !important;
   }
 }
+
+/* Shared pill controls: consistent with the homepage doctor search.
+   Scope to action buttons and single-line fields; exclude icon-only controls,
+   checkboxes, radios, switches and multiline textareas. */
+@layer components {
+  button:not([role="switch"]):not([aria-label="Close"]):not([aria-label="Open menu"]),
+  input:is([type="text"],[type="email"],[type="password"],[type="number"],[type="tel"],[type="date"],[type="time"],[type="search"]),
+  select,
+  .MuiButton-root,
+  .MuiOutlinedInput-root,
+  .MuiInputBase-root:not(.MuiInputBase-multiline),
+  .MuiSelect-select {
+    border-radius: 9999px;
+  }
+  input:is([type="text"],[type="email"],[type="password"],[type="number"],[type="tel"],[type="date"],[type="time"],[type="search"]):not(.MuiInputBase-input),
+  select:not(.MuiSelect-select) {
+    min-height: 40px;
+    padding-inline: 14px;
+  }
+}
