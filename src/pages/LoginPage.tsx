@@ -5,10 +5,7 @@ import {
   Grid,
   Typography,
   Paper,
-  TextField,
   Button,
-  InputAdornment,
-  IconButton,
   Alert,
   Checkbox,
   FormControlLabel,
@@ -333,66 +330,49 @@ export const LoginPage: React.FC<LoginPageProps> = ({
               </Alert>
             )}
 
-            {/* Form with Universal Design System Inputs */}
+            {/* Tailwind pill inputs shared with the G-One search and filter controls */}
             <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 2.2 }}>
-              {/* Email Input */}
-              <Box>
-                <TextField
-                  id="doctor-email-input"
-                  fullWidth
-                  type="email"
-                  label="Email address"
-                  placeholder="doctor@gonehealth.org"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  variant="outlined"
-                  slotProps={{
-                    input: {
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <Email sx={{ color: '#64748b', fontSize: 20 }} />
-                        </InputAdornment>
-                      ),
-                    },
-                  }}
-                />
-              </Box>
-
-              {/* Password Input */}
-              <Box>
-                <TextField
-                  id="doctor-password-input"
-                  fullWidth
-                  type={showPassword ? 'text' : 'password'}
-                  label="Password"
-                  placeholder="••••••••••••"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  variant="outlined"
-                  slotProps={{
-                    input: {
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <Lock sx={{ color: '#64748b', fontSize: 20 }} />
-                        </InputAdornment>
-                      ),
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <IconButton
-                            aria-label="toggle password visibility"
-                            onClick={() => setShowPassword(!showPassword)}
-                            edge="end"
-                            size="small"
-                            sx={{ color: '#64748b', mr: 0.5 }}
-                          >
-                            {showPassword ? <VisibilityOff fontSize="small" /> : <Visibility fontSize="small" />}
-                          </IconButton>
-                        </InputAdornment>
-                      ),
-                    },
-                  }}
-                />
-              </Box>
+              <div className="space-y-1.5">
+                <label htmlFor="doctor-email-input" className="block text-sm font-medium text-slate-700">Email address</label>
+                <div className="flex h-11 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 transition-colors focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100">
+                  <Email sx={{ color: '#64748b', fontSize: 19 }} aria-hidden="true" />
+                  <input
+                    id="doctor-email-input"
+                    type="email"
+                    autoComplete="username"
+                    required
+                    placeholder="doctor@gonehealth.org"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="h-full min-w-0 flex-1 border-0 bg-transparent p-0 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                  />
+                </div>
+              </div>
+              <div className="space-y-1.5">
+                <label htmlFor="doctor-password-input" className="block text-sm font-medium text-slate-700">Password</label>
+                <div className="flex h-11 items-center gap-3 rounded-full border border-slate-200 bg-white pl-4 pr-2 transition-colors focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100">
+                  <Lock sx={{ color: '#64748b', fontSize: 19 }} aria-hidden="true" />
+                  <input
+                    id="doctor-password-input"
+                    type={showPassword ? 'text' : 'password'}
+                    autoComplete="current-password"
+                    required
+                    placeholder="Enter your password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="h-full min-w-0 flex-1 border-0 bg-transparent p-0 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                  />
+                  <button
+                    type="button"
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                    aria-pressed={showPassword}
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100"
+                  >
+                    {showPassword ? <VisibilityOff sx={{ fontSize: 19 }} /> : <Visibility sx={{ fontSize: 19 }} />}
+                  </button>
+                </div>
+              </div>
 
               {/* Remember Me & Forgot Password */}
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: -0.5 }}>
