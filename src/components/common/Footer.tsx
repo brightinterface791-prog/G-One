@@ -62,7 +62,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onNavigate }) => 
 
           {/* Quick Patient Services */}
           <Grid size={{ xs: 12, sm: 6, md: 2.5 }}>
-            <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#ffffff', mb: 2 }}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#ffffff', mb: 2 }}>
               Patient Services
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
@@ -97,7 +97,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onNavigate }) => 
               <Button
                 id="footer-emergency-link"
                 onClick={() => onNavigate('emergency')}
-                sx={{ justifyContent: 'flex-start', color: '#ef4444', px: 0, fontWeight: 700 }}
+                sx={{ justifyContent: 'flex-start', color: '#ef4444', px: 0, fontWeight: 600 }}
               >
                 24/7 Emergency Wing
               </Button>
@@ -106,7 +106,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onNavigate }) => 
 
           {/* Medical Centers & Timings */}
           <Grid size={{ xs: 12, sm: 6, md: 2.5 }}>
-            <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#ffffff', mb: 2 }}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#ffffff', mb: 2 }}>
               Operating Hours
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, color: '#94a3b8', fontSize: '0.875rem' }}>
@@ -133,7 +133,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onNavigate }) => 
 
           {/* Contact & Address */}
           <Grid size={{ xs: 12, md: 3 }}>
-            <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#ffffff', mb: 2 }}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#ffffff', mb: 2 }}>
               Contact Center
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, color: '#94a3b8', fontSize: '0.875rem' }}>
