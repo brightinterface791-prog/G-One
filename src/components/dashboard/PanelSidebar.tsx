@@ -110,7 +110,7 @@ export const PanelSidebar: React.FC<PanelSidebarProps> = ({
               variant="caption"
               sx={{
                 color: '#94a3b8',
-                fontWeight: 800,
+                fontWeight: 600,
                 letterSpacing: '0.08em',
                 fontSize: '0.68rem',
               }}
@@ -195,7 +195,7 @@ export const PanelSidebar: React.FC<PanelSidebarProps> = ({
                         sx={{
                           height: 20,
                           fontSize: '0.68rem',
-                          fontWeight: 800,
+                          fontWeight: 600,
                           backgroundColor: item.badgeColor,
                           color: '#ffffff',
                           ml: 1,
@@ -218,7 +218,7 @@ export const PanelSidebar: React.FC<PanelSidebarProps> = ({
               variant="caption"
               sx={{
                 color: '#94a3b8',
-                fontWeight: 800,
+                fontWeight: 600,
                 letterSpacing: '0.08em',
                 fontSize: '0.68rem',
               }}
@@ -287,7 +287,7 @@ export const PanelSidebar: React.FC<PanelSidebarProps> = ({
           >
             <Shield sx={{ color: '#16a34a', fontSize: 20 }} />
             <Box>
-              <Typography variant="caption" sx={{ fontWeight: 800, color: '#0f172a', display: 'block', lineHeight: 1.1 }}>
+              <Typography variant="caption" sx={{ fontWeight: 600, color: '#0f172a', display: 'block', lineHeight: 1.1 }}>
                 Secure Clinical Portal
               </Typography>
               <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.68rem' }}>
@@ -321,7 +321,7 @@ export const PanelSidebar: React.FC<PanelSidebarProps> = ({
                 variant="body2"
                 sx={{
                   fontSize: '0.86rem',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   color: '#dc2626',
                 }}
               >
