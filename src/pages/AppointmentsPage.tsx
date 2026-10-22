@@ -569,7 +569,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                   aria-label="Filter appointments by date"
                   value={dateFilter}
                   onChange={(e) => setDateFilter(e.target.value as typeof dateFilter)}
-                  className="h-11 w-full min-w-0 appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm font-normal text-slate-800 shadow-sm outline-none transition-colors hover:border-slate-300 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                  className="custom-select-chevron h-11 w-full min-w-0 appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm font-normal text-slate-800 shadow-sm outline-none transition-colors hover:border-slate-300 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
                 >
                   <option value="all">All Dates</option>
                   <option value="today">Today (Sep 6)</option>
@@ -585,7 +585,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                   aria-label="Filter appointments by modality"
                   value={modalityFilter}
                   onChange={(e) => setModalityFilter(e.target.value)}
-                  className="h-11 w-full min-w-0 appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm font-normal text-slate-800 shadow-sm outline-none transition-colors hover:border-slate-300 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                  className="custom-select-chevron h-11 w-full min-w-0 appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm font-normal text-slate-800 shadow-sm outline-none transition-colors hover:border-slate-300 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
                 >
                   <option value="All">All Modalities</option>
                   <option value="In-Person OPD">In-Person OPD</option>
