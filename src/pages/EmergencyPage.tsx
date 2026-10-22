@@ -70,11 +70,11 @@ export const EmergencyPage: React.FC<EmergencyPageProps> = ({ onOpenBooking }) =
                     boxShadow: '0 0 10px #dc2626',
                   }}
                 />
-                <Typography variant="caption" sx={{ fontWeight: 800, color: '#dc2626', letterSpacing: '0.05em' }}>
+                <Typography variant="caption" sx={{ fontWeight: 600, color: '#dc2626', letterSpacing: '0.05em' }}>
                   24/7 LEVEL-1 TRAUMA & EMERGENCY DISPATCH ACTIVE
                 </Typography>
               </Box>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: '#0f172a', mb: 1 }}>
+              <Typography variant="h3" sx={{ fontWeight: 600, color: '#0f172a', mb: 1 }}>
                 Instant Emergency & Ambulance Support
               </Typography>
               <Typography variant="body1" sx={{ color: '#475569', mb: 3 }}>
@@ -90,7 +90,7 @@ export const EmergencyPage: React.FC<EmergencyPageProps> = ({ onOpenBooking }) =
                   sx={{
                     backgroundColor: '#dc2626',
                     color: '#ffffff',
-                    fontWeight: 800,
+                    fontWeight: 600,
                     fontSize: '1.1rem',
                     py: 1.5,
                     px: 3.5,
@@ -116,13 +116,13 @@ export const EmergencyPage: React.FC<EmergencyPageProps> = ({ onOpenBooking }) =
                 }}
               >
                 <AirportShuttle sx={{ fontSize: 56, color: '#dc2626', mb: 1 }} />
-                <Typography variant="h6" sx={{ fontWeight: 800, color: '#991b1b', mb: 0.5 }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#991b1b', mb: 0.5 }}>
                   Ambulance Fleet on Standby
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#7f1d1d', display: 'block', mb: 2 }}>
                   Equipped with Advanced Cardiac Life Support (ACLS), portable ventilators, and onboard emergency physicians.
                 </Typography>
-                <Chip label="12 Ambulances Live in Metro Area" color="error" size="small" sx={{ fontWeight: 700 }} />
+                <Chip label="12 Ambulances Live in Metro Area" color="error" size="small" sx={{ fontWeight: 600 }} />
               </Box>
             </Grid>
           </Grid>
@@ -135,7 +135,7 @@ export const EmergencyPage: React.FC<EmergencyPageProps> = ({ onOpenBooking }) =
             <Paper elevation={0} sx={{ p: 3.5, borderRadius: 3, border: '1px solid #e2e8f0', backgroundColor: '#ffffff', height: '100%' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
                 <Warning sx={{ color: '#d97706' }} />
-                <Typography variant="h5" sx={{ fontWeight: 800, color: '#0f172a' }}>
+                <Typography variant="h5" sx={{ fontWeight: 600, color: '#0f172a' }}>
                   Emergency Triage Red Flags
                 </Typography>
               </Box>
@@ -164,7 +164,7 @@ export const EmergencyPage: React.FC<EmergencyPageProps> = ({ onOpenBooking }) =
                 ].map((item, idx) => (
                   <Grid size={{ xs: 12, sm: 6 }} key={idx}>
                     <Box sx={{ p: 2, backgroundColor: '#f8fafc', borderRadius: 2, border: '1px solid #f1f5f9' }}>
-                      <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#0f172a', mb: 0.5 }}>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                         {item.title}
                       </Typography>
                       <Typography variant="caption" sx={{ color: '#475569', display: 'block', lineHeight: 1.5 }}>
@@ -194,7 +194,7 @@ export const EmergencyPage: React.FC<EmergencyPageProps> = ({ onOpenBooking }) =
           {/* Rapid Emergency Callback Request */}
           <Grid size={{ xs: 12, md: 5 }}>
             <Paper elevation={0} sx={{ p: 3.5, borderRadius: 3, border: '1px solid #e2e8f0', backgroundColor: '#ffffff', height: '100%' }}>
-              <Typography variant="h5" sx={{ fontWeight: 800, color: '#0f172a', mb: 1 }}>
+              <Typography variant="h5" sx={{ fontWeight: 600, color: '#0f172a', mb: 1 }}>
                 Priority Emergency Callback
               </Typography>
               <Typography variant="body2" sx={{ color: '#64748b', mb: 3 }}>
@@ -242,7 +242,7 @@ export const EmergencyPage: React.FC<EmergencyPageProps> = ({ onOpenBooking }) =
                     variant="contained"
                     size="large"
                     color="error"
-                    sx={{ fontWeight: 800, py: 1.5 }}
+                    sx={{ fontWeight: 600, py: 1.5 }}
                   >
                     Request Emergency Callback Now
                   </Button>
