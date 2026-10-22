@@ -72,7 +72,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 sx={{
                   backgroundColor: 'rgba(183, 3, 2, 0.07)',
                   color: THEME_COLOR,
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: '0.8125rem',
                   border: '1px solid rgba(183, 3, 2, 0.2)',
                   px: 0.5,
@@ -85,7 +85,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               sx={{
                 fontSize: { xs: '2.25rem', sm: '3rem', md: '3.5rem' },
                 lineHeight: 1.15,
-                fontWeight: 800,
+                fontWeight: 600,
                 color: '#0f172a',
                 mb: 2.5,
               }}
@@ -216,7 +216,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     <Star sx={{ fontSize: 20 }} />
                   </Box>
                   <Box>
-                    <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a', lineHeight: 1.1 }}>
+                    <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a', lineHeight: 1.1 }}>
                       4.95 / 5.0
                     </Typography>
                     <Typography variant="caption" sx={{ color: '#64748b' }}>
@@ -242,7 +242,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                       <Favorite sx={{ color: THEME_COLOR, fontSize: 18 }} />
-                      <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a' }}>
+                      <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>
                         Patient Vitals Sync
                       </Typography>
                     </Box>
@@ -252,7 +252,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       sx={{
                         backgroundColor: 'rgba(22, 163, 74, 0.1)',
                         color: '#16a34a',
-                        fontWeight: 700,
+                        fontWeight: 600,
                         height: 20,
                         fontSize: '0.7rem',
                       }}
@@ -265,7 +265,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         <Typography variant="caption" sx={{ color: '#64748b', display: 'block', fontSize: '0.7rem' }}>
                           Blood Pressure
                         </Typography>
-                        <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a' }}>
+                        <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>
                           120/80
                         </Typography>
                       </Box>
@@ -275,7 +275,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         <Typography variant="caption" sx={{ color: '#64748b', display: 'block', fontSize: '0.7rem' }}>
                           Heart Rate
                         </Typography>
-                        <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a' }}>
+                        <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>
                           72 bpm
                         </Typography>
                       </Box>
@@ -285,7 +285,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         <Typography variant="caption" sx={{ color: '#64748b', display: 'block', fontSize: '0.7rem' }}>
                           SpO2 Level
                         </Typography>
-                        <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a' }}>
+                        <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>
                           99%
                         </Typography>
                       </Box>
