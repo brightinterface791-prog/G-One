@@ -219,3 +219,21 @@
     background-color: #fff;
   }
 }
+
+/* Faculty onboarding: match the global pill-shaped controls despite local MUI sx overrides. */
+.faculty-onboarding-dialog .MuiOutlinedInput-root:not(.MuiInputBase-multiline),
+.faculty-onboarding-dialog .MuiButton-root,
+.faculty-onboarding-dialog .MuiChip-root {
+  border-radius: 9999px !important;
+}
+.faculty-onboarding-dialog .MuiOutlinedInput-root:not(.MuiInputBase-multiline) {
+  min-height: 44px;
+  background-color: #fff;
+}
+.faculty-onboarding-dialog .MuiOutlinedInput-notchedOutline {
+  border-color: #e2e8f0;
+}
+.faculty-onboarding-dialog .MuiSelect-icon {
+  right: 20px !important;
+  color: #64748b !important;
+}
