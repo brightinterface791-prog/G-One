@@ -627,7 +627,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
               <Tab label={`Cancelled (${cancelledCount})`} value="Cancelled" />
             </Tabs>
           </Box>
-        </Paper>
+        </div>
 
         {/* 5. Appointment Content (Cards or Table) */}
         {filteredAppointments.length === 0 ? (
