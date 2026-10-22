@@ -99,7 +99,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
                 variant="overline"
                 sx={{
                   color: THEME_COLOR,
-                  fontWeight: 800,
+                  fontWeight: 600,
                   letterSpacing: '0.08em',
                   fontSize: '0.75rem',
                 }}
@@ -111,7 +111,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
               variant="h2"
               sx={{
                 fontSize: { xs: '1.75rem', sm: '2.15rem', md: '2.4rem' },
-                fontWeight: 800,
+                fontWeight: 600,
                 color: '#0f172a',
                 letterSpacing: '-0.02em',
                 lineHeight: 1.2,
@@ -157,7 +157,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
                 },
               }}
             >
-              <Typography sx={{ fontWeight: 700, fontSize: '0.92rem' }}>
+              <Typography sx={{ fontWeight: 600, fontSize: '0.92rem' }}>
                 Explore All Departments
               </Typography>
               <ChevronRight className="specialties-header-arrow" sx={{ fontSize: 18, transition: 'transform 0.2s ease' }} />
@@ -214,7 +214,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
                     </Box>
 
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-                      <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '1.1rem' }}>
+                      <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '1.1rem' }}>
                         {spec.title}
                       </Typography>
                       <Chip
@@ -223,7 +223,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
                         sx={{
                           height: 22,
                           fontSize: '0.72rem',
-                          fontWeight: 700,
+                          fontWeight: 600,
                           backgroundColor: '#ffffff',
                           color: '#475569',
                           border: '1px solid #e2e8f0',
@@ -263,7 +263,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
                         e.stopPropagation();
                         onBookWithSpecialty(spec.title);
                       }}
-                      sx={{ fontWeight: 700, p: 0, textTransform: 'none', fontSize: '0.84rem', '&:hover': { background: 'transparent' } }}
+                      sx={{ fontWeight: 600, p: 0, textTransform: 'none', fontSize: '0.84rem', '&:hover': { background: 'transparent' } }}
                       endIcon={<ArrowForward sx={{ fontSize: 16 }} />}
                     >
                       Book Visit
@@ -315,7 +315,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({
             >
               <Typography
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: '0.94rem',
                   lineHeight: 1.2,
                 }}
