@@ -214,7 +214,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 sx={{
                   backgroundColor: currentPage === 'login' ? '#950201' : THEME_COLOR,
                   color: '#ffffff',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: '0.9rem',
                   py: 0.9,
                   px: 2.6,
@@ -245,7 +245,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 sx={{
                   backgroundColor: currentPage === 'login' ? '#950201' : THEME_COLOR,
                   color: '#ffffff',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: '0.82rem',
                   py: 0.6,
                   px: 1.6,
@@ -357,7 +357,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             color: '#ffffff',
             py: 1.2,
             borderRadius: '9999px',
-            fontWeight: 700,
+            fontWeight: 600,
             boxShadow: '0 4px 14px rgba(183, 3, 2, 0.25)',
             textTransform: 'none',
             '&:hover': {
