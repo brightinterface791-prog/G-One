@@ -133,7 +133,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
                 sx={{
                   backgroundColor: 'rgba(183, 3, 2, 0.08)',
                   color: THEME_COLOR,
-                  fontWeight: 800,
+                  fontWeight: 600,
                   fontSize: '0.68rem',
                   borderRadius: '9999px',
                 }}
@@ -142,7 +142,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
                 Hospital & Clinic Master Setup
               </Typography>
             </Box>
-            <Typography variant="h4" sx={{ fontWeight: 900, color: '#0f172a', fontSize: { xs: '1.5rem', sm: '1.85rem' }, letterSpacing: '-0.02em' }}>
+            <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', fontSize: { xs: '1.5rem', sm: '1.85rem' }, letterSpacing: '-0.02em' }}>
               Hospital Medical Specialties & Wings
             </Typography>
             <Typography variant="body2" sx={{ color: '#475569', fontSize: '0.86rem', maxWidth: 720 }}>
@@ -159,7 +159,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
               sx={{
                 backgroundColor: THEME_COLOR,
                 textTransform: 'none',
-                fontWeight: 700,
+                fontWeight: 600,
                 borderRadius: '9999px',
                 fontSize: '0.82rem',
                 px: 2.5,
@@ -216,7 +216,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
                       <Chip
                         label={`${spec.doctorCount} Doctors`}
                         size="small"
-                        sx={{ fontWeight: 700, backgroundColor: '#f1f5f9', color: '#475569', fontSize: '0.72rem' }}
+                        sx={{ fontWeight: 600, backgroundColor: '#f1f5f9', color: '#475569', fontSize: '0.72rem' }}
                       />
                       {onRemoveSpecialty && (
                         <Tooltip title="Remove Department">
@@ -233,10 +233,10 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
                   </Box>
 
                   {/* Title & Description */}
-                  <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '1.05rem', mb: 0.5 }}>
+                  <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '1.05rem', mb: 0.5 }}>
                     {spec.title}
                   </Typography>
-                  <Typography variant="caption" sx={{ color: '#0284c7', fontWeight: 700, mb: 1.5, display: 'block' }}>
+                  <Typography variant="caption" sx={{ color: '#0284c7', fontWeight: 600, mb: 1.5, display: 'block' }}>
                     {spec.department}
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#64748b', mb: 2.5, fontSize: '0.84rem', lineHeight: 1.55, flexGrow: 1 }}>
@@ -245,7 +245,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
 
                   {/* Conditions Treated */}
                   <Box sx={{ mb: 2.5 }}>
-                    <Typography variant="caption" sx={{ color: '#475569', fontWeight: 700, display: 'block', mb: 0.8, fontSize: '0.72rem' }}>
+                    <Typography variant="caption" sx={{ color: '#475569', fontWeight: 600, display: 'block', mb: 0.8, fontSize: '0.72rem' }}>
                       Clinical Scope & Treated Conditions:
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.6 }}>
@@ -274,7 +274,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
                       size="small"
                       onClick={() => onSelectSpecialty(spec.title)}
                       sx={{
-                        fontWeight: 700,
+                        fontWeight: 600,
                         fontSize: '0.78rem',
                         textTransform: 'none',
                         borderRadius: '9999px',
@@ -292,7 +292,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
                       onClick={() => onBookWithSpecialty(spec.title)}
                       sx={{
                         backgroundColor: THEME_COLOR,
-                        fontWeight: 700,
+                        fontWeight: 600,
                         fontSize: '0.78rem',
                         textTransform: 'none',
                         borderRadius: '9999px',
@@ -384,7 +384,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
 
           <Box>
             <Typography sx={{ fontSize: '14px', fontWeight: 600, color: '#1e293b', mb: 0.75 }}>
-              Specialty Name <Box component="span" sx={{ color: THEME_COLOR, fontWeight: 700 }}>*</Box>
+              Specialty Name <Box component="span" sx={{ color: THEME_COLOR, fontWeight: 600 }}>*</Box>
             </Typography>
             <TextField
               fullWidth
@@ -412,7 +412,7 @@ export const SpecialtiesPage: React.FC<SpecialtiesPageProps> = ({
 
           <Box>
             <Typography sx={{ fontSize: '14px', fontWeight: 600, color: '#1e293b', mb: 0.75 }}>
-              Clinical Description <Box component="span" sx={{ color: THEME_COLOR, fontWeight: 700 }}>*</Box>
+              Clinical Description <Box component="span" sx={{ color: THEME_COLOR, fontWeight: 600 }}>*</Box>
             </Typography>
             <TextField
               fullWidth
