@@ -237,3 +237,42 @@
   right: 20px !important;
   color: #64748b !important;
 }
+
+/* G-One unified control system — applies across public pages, dashboards and dialogs.
+   Higher specificity and !important are intentional: existing screens set local MUI sx
+   borderRadius values which otherwise override the shared theme. */
+:root {
+  --gone-control-radius: 9999px;
+  --gone-control-border: #e2e8f0;
+}
+button:not(.MuiIconButton-root):not(.MuiTab-root):not(.MuiToggleButton-root):not([role="switch"]):not([role="tab"]),
+.MuiButton-root,
+.MuiButtonBase-root.MuiButton-root,
+.MuiChip-root,
+.MuiChip-root.MuiChip-clickable,
+.MuiOutlinedInput-root:not(.MuiInputBase-multiline),
+.MuiInputBase-root.MuiOutlinedInput-root:not(.MuiInputBase-multiline),
+.MuiSelect-select,
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not(.MuiInputBase-input),
+select:not(.MuiSelect-select) {
+  border-radius: var(--gone-control-radius) !important;
+}
+.MuiOutlinedInput-root:not(.MuiInputBase-multiline) .MuiOutlinedInput-notchedOutline {
+  border-radius: inherit;
+}
+.MuiSelect-icon {
+  right: 20px !important;
+  width: 16px !important;
+  height: 16px !important;
+  color: #64748b !important;
+}
+.MuiSelect-select {
+  padding-right: 48px !important;
+}
+select:not(.MuiSelect-select):not(.custom-select-chevron) {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 48px !important;
+  background-position: right 20px center !important;
+}
+/* Keep multiline text areas, navigation tabs and icon buttons in their intended shapes. */
