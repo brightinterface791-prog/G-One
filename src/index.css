@@ -185,3 +185,37 @@
     padding-inline: 14px;
   }
 }
+
+/* Unified premium dropdown appearance for native and Material UI selects.
+   Native selects with their own inline chevron opt out via .custom-select-chevron. */
+@layer components {
+  select:not(.MuiSelect-select):not(.custom-select-chevron) {
+    appearance: none;
+    -webkit-appearance: none;
+    min-height: 44px;
+    padding-left: 20px;
+    padding-right: 48px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364758b' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 16px 16px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+  }
+  .MuiSelect-select {
+    padding-right: 48px !important;
+  }
+  .MuiSelect-icon {
+    right: 20px !important;
+    width: 16px !important;
+    height: 16px !important;
+    color: #64748b !important;
+  }
+  .MuiOutlinedInput-root:has(.MuiSelect-select) {
+    border-radius: 9999px !important;
+    background-color: #fff;
+  }
+}
