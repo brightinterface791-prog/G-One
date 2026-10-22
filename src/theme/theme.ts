@@ -194,7 +194,7 @@ let theme = createTheme({
           fontFamily: FONT_DISPLAY,
           fontSize: '16px',
           fontWeight: 500,
-          borderRadius: 8,
+          borderRadius: 9999,
           padding: '9px 18px',
           boxShadow: 'none',
           textTransform: 'none',
@@ -224,12 +224,12 @@ let theme = createTheme({
         sizeSmall: {
           fontSize: '15px',
           padding: '5px 13px',
-          borderRadius: 6,
+          borderRadius: 9999,
         },
         sizeLarge: {
           fontSize: '17px',
           padding: '12px 24px',
-          borderRadius: 8,
+          borderRadius: 9999,
         },
       },
     },
@@ -287,10 +287,10 @@ let theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          borderRadius: 12,
+          borderRadius: 9999,
           fontSize: '16px',
           fontWeight: 400,
-          minHeight: 48,
+          minHeight: 44,
           backgroundColor: '#ffffff',
           '&.Mui-disabled': { backgroundColor: '#f7f5f4' },
           transition: 'border-color 0.15s ease, box-shadow 0.15s ease',
@@ -303,7 +303,7 @@ let theme = createTheme({
           },
           '&.Mui-focused fieldset': {
             borderColor: '#64748b',
-            borderWidth: '1.5px',
+            borderWidth: '1px',
           },
           '&.Mui-focused': {
             boxShadow: '0 0 0 4px rgba(100, 116, 139, 0.10)',
@@ -388,7 +388,7 @@ let theme = createTheme({
     MuiSelect: {
       styleOverrides: {
         root: {
-          borderRadius: 12,
+          borderRadius: 9999,
           fontSize: '16px',
           fontWeight: 400,
           backgroundColor: '#ffffff',
