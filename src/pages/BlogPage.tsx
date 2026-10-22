@@ -35,23 +35,20 @@ export const BlogPage: React.FC = () => {
           <p className="max-w-sm text-[17px] leading-7 text-[#6e6e73]">The latest stories, insights and helpful guides for a healthier tomorrow.</p>
         </header>
 
-        <div className="grid items-start gap-8 lg:grid-cols-[240px_minmax(0,1fr)] xl:gap-12">
-          <aside className="min-w-0 lg:sticky lg:top-28">
-            <h2 className="mb-5 text-lg font-semibold tracking-tight">Explore Newsroom</h2>
-            <label className="mb-7 flex items-center gap-3 rounded-2xl border border-[#d2d2d7] bg-white px-4 py-3">
-              <Search size={17} className="shrink-0 text-[#86868b]" />
-              <input value={search} onChange={event => { setSearch(event.target.value); setSelected(null); }} placeholder="Search stories" aria-label="Search Newsroom stories" className="min-w-0 w-full bg-transparent text-sm text-[#1d1d1f] outline-none placeholder:text-[#86868b]" />
-            </label>
-            <nav aria-label="Newsroom categories" className="flex flex-wrap gap-2 lg:flex-col lg:gap-1">
-              {categories.map(item => (
-                <button key={item} type="button" onClick={() => { setCategory(item); setSelected(null); }} aria-current={category === item ? 'page' : undefined} className={`flex items-center justify-between gap-4 rounded-xl px-4 py-3 text-left text-sm transition-colors ${category === item ? 'bg-white font-semibold text-[#b70302] shadow-sm' : 'font-medium text-[#6e6e73] hover:bg-white hover:text-[#1d1d1f]'}`}>
-                  <span>{item}</span><span className="text-xs opacity-60">{item === 'All Stories' ? articles.length : articles.filter(a => a.category === item).length}</span>
-                </button>
-              ))}
-            </nav>
-            <p className="mt-8 hidden text-xs leading-6 text-[#86868b] lg:block">Information for general education only. For personal medical advice, speak with a qualified clinician.</p>
-          </aside>
-
+        <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <nav aria-label="Newsroom categories" className="flex flex-wrap gap-2">
+            {categories.map(item => (
+              <button key={item} type="button" onClick={() => { setCategory(item); setSelected(null); }} aria-current={category === item ? 'page' : undefined} className={`rounded-full px-5 py-2.5 text-sm transition-colors ${category === item ? 'bg-[#1d1d1f] font-semibold text-white' : 'bg-white font-medium text-[#6e6e73] hover:text-[#1d1d1f]'}`}>
+                {item}
+              </button>
+            ))}
+          </nav>
+          <label className="flex w-full shrink-0 items-center gap-3 rounded-full border border-[#d2d2d7] bg-white px-4 py-3 sm:w-60">
+            <Search size={17} className="shrink-0 text-[#86868b]" />
+            <input value={search} onChange={event => { setSearch(event.target.value); setSelected(null); }} placeholder="Search stories" aria-label="Search Newsroom stories" className="min-w-0 w-full bg-transparent text-sm outline-none placeholder:text-[#86868b]" />
+          </label>
+        </div>
+        <div>
           <section aria-label="Newsroom stories" className="min-w-0">
             {activeArticle ? (
               <article className="overflow-hidden rounded-[28px] bg-white">
