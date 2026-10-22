@@ -563,29 +563,39 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                 className="h-11 w-full rounded-full border border-slate-200 bg-white py-2 pl-11 pr-4 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
               />
             </div>
-            <div className="grid min-w-0 grid-cols-2 gap-3 sm:grid-cols-2 lg:flex-[2]">
-              <select
-                aria-label="Filter appointments by date"
-                value={dateFilter}
-                onChange={(e) => setDateFilter(e.target.value as typeof dateFilter)}
-                className="h-11 min-w-0 w-full rounded-full border border-slate-200 bg-white px-4 text-sm text-slate-800 outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
-              >
-                <option value="all">All Dates</option>
-                <option value="today">Today (Sep 6)</option>
-                <option value="upcoming">Upcoming</option>
-                <option value="past">Past Consultations</option>
-              </select>
-              <select
-                aria-label="Filter appointments by modality"
-                value={modalityFilter}
-                onChange={(e) => setModalityFilter(e.target.value)}
-                className="h-11 min-w-0 w-full rounded-full border border-slate-200 bg-white px-4 text-sm text-slate-800 outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
-              >
-                <option value="All">All Modalities</option>
-                <option value="In-Person OPD">In-Person OPD</option>
-                <option value="Follow-up Consultation">Follow-up Consultation</option>
-                <option value="Diagnostic Assessment">Diagnostic Assessment</option>
-              </select>
+            <div className="grid min-w-0 grid-cols-2 gap-3 lg:flex-[2]">
+              <div className="relative min-w-0">
+                <select
+                  aria-label="Filter appointments by date"
+                  value={dateFilter}
+                  onChange={(e) => setDateFilter(e.target.value as typeof dateFilter)}
+                  className="h-11 w-full min-w-0 appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm font-normal text-slate-800 shadow-sm outline-none transition-colors hover:border-slate-300 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                >
+                  <option value="all">All Dates</option>
+                  <option value="today">Today (Sep 6)</option>
+                  <option value="upcoming">Upcoming</option>
+                  <option value="past">Past Consultations</option>
+                </select>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="pointer-events-none absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </div>
+              <div className="relative min-w-0">
+                <select
+                  aria-label="Filter appointments by modality"
+                  value={modalityFilter}
+                  onChange={(e) => setModalityFilter(e.target.value)}
+                  className="h-11 w-full min-w-0 appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm font-normal text-slate-800 shadow-sm outline-none transition-colors hover:border-slate-300 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                >
+                  <option value="All">All Modalities</option>
+                  <option value="In-Person OPD">In-Person OPD</option>
+                  <option value="Follow-up Consultation">Follow-up Consultation</option>
+                  <option value="Diagnostic Assessment">Diagnostic Assessment</option>
+                </select>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="pointer-events-none absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </div>
             </div>
             <div className="flex shrink-0 items-center justify-end gap-2">
               <div className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 p-1">
