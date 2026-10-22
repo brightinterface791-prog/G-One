@@ -567,68 +567,32 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                   No dynamic fields to preview. Add fields on the left.
                 </Typography>
               ) : (
-                <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Box component="form" className="flex flex-col gap-4" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                   {currentFields.map((f) => (
-                    <Box key={f.id}>
-                      <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a', fontSize: '0.82rem', mb: 0.5 }}>
-                        {f.label} {f.required && <span style={{ color: '#dc2626' }}>*</span>}
-                      </Typography>
-
-                      {f.type === 'text' && (
-                        <TextField
-                          fullWidth
-                          size="small"
-                          placeholder={f.placeholder}
+                    <Box key={f.id} className="flex min-w-0 flex-col gap-1.5">
+                      <label htmlFor={`preview-field-${f.id}`} className="block text-[13px] font-medium leading-5 text-slate-800">
+                        {f.label} {f.required && <span className="text-red-600">*</span>}
+                      </label>
+                      {(f.type === 'text' || f.type === 'number') && (
+                        <input id={`preview-field-${f.id}`} type={f.type} placeholder={f.placeholder}
                           value={previewValues[f.id] || ''}
                           onChange={(e) => setPreviewValues({ ...previewValues, [f.id]: e.target.value })}
-                          helperText={f.helperText}
-                        />
+                          className="h-11 w-full min-w-0 rounded-full border border-slate-200 bg-white px-5 text-sm font-normal text-slate-800 outline-none placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100" />
                       )}
-
                       {f.type === 'textarea' && (
-                        <TextField
-                          fullWidth
-                          multiline
-                          rows={2}
-                          size="small"
-                          placeholder={f.placeholder}
+                        <textarea id={`preview-field-${f.id}`} rows={2} placeholder={f.placeholder}
                           value={previewValues[f.id] || ''}
                           onChange={(e) => setPreviewValues({ ...previewValues, [f.id]: e.target.value })}
-                          helperText={f.helperText}
-                        />
+                          className="w-full min-w-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100" />
                       )}
-
-                      {f.type === 'number' && (
-                        <TextField
-                          fullWidth
-                          type="number"
-                          size="small"
-                          placeholder={f.placeholder}
-                          value={previewValues[f.id] || ''}
-                          onChange={(e) => setPreviewValues({ ...previewValues, [f.id]: e.target.value })}
-                          helperText={f.helperText}
-                        />
-                      )}
-
                       {f.type === 'select' && (
-                        <FormControl fullWidth size="small">
-                          <Select
-                            value={previewValues[f.id] || ''}
-                            onChange={(e) => setPreviewValues({ ...previewValues, [f.id]: e.target.value })}
-                            displayEmpty
-                          >
-                            <MenuItem value="" disabled>
-                              <em>{f.placeholder || 'Select an option...'}</em>
-                            </MenuItem>
-                            {(f.options || []).map((opt) => (
-                              <MenuItem key={opt} value={opt}>
-                                {opt}
-                              </MenuItem>
-                            ))}
-                          </Select>
-                        </FormControl>
+                        <select id={`preview-field-${f.id}`} value={previewValues[f.id] || ''}
+                          onChange={(e) => setPreviewValues({ ...previewValues, [f.id]: e.target.value })}
+                          className="h-11 w-full min-w-0 appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm text-slate-800 outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100">
+                          <option value="" disabled>{f.placeholder || 'Select an option...'}</option>
+                          {(f.options || []).map((opt) => <option key={opt} value={opt}>{opt}</option>)}
+                        </select>
                       )}
-
                       {f.type === 'radio' && (
                         <RadioGroup
                           value={previewValues[f.id] || ''}
@@ -656,6 +620,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                           label={f.placeholder || 'I confirm this clinical statement'}
                         />
                       )}
+                      {f.helperText && <p className="mt-0.5 text-xs leading-5 text-slate-500">{f.helperText}</p>}
                     </Box>
                   ))}
 
