@@ -276,3 +276,27 @@ select:not(.MuiSelect-select):not(.custom-select-chevron) {
   background-position: right 20px center !important;
 }
 /* Keep multiline text areas, navigation tabs and icon buttons in their intended shapes. */
+
+/* Faculty form: compact label-to-control rhythm and identical field heights.
+   MUI Grid's flex items may stretch controls; keep every label/field grouped. */
+.faculty-onboarding-dialog .MuiFormControl-root {
+  justify-content: flex-start;
+}
+.faculty-onboarding-dialog .MuiFormControl-root .MuiOutlinedInput-root:not(.MuiInputBase-multiline),
+.faculty-onboarding-dialog .MuiTextField-root .MuiOutlinedInput-root:not(.MuiInputBase-multiline) {
+  height: 44px;
+  min-height: 44px;
+}
+.faculty-onboarding-dialog .MuiInputBase-input:not(textarea),
+.faculty-onboarding-dialog .MuiSelect-select {
+  font-size: 14px !important;
+}
+.faculty-onboarding-dialog .MuiFormHelperText-root {
+  margin-top: 4px;
+}
+.faculty-onboarding-dialog .MuiOutlinedInput-notchedOutline legend {
+  max-width: 0 !important;
+}
+.faculty-onboarding-dialog .MuiSelect-icon {
+  right: 20px !important;
+}
