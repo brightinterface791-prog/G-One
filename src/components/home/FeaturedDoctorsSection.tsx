@@ -81,7 +81,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
                 variant="overline"
                 sx={{
                   color: THEME_COLOR,
-                  fontWeight: 800,
+                  fontWeight: 600,
                   letterSpacing: '0.08em',
                   fontSize: '0.75rem',
                 }}
@@ -93,7 +93,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
               variant="h2"
               sx={{
                 fontSize: { xs: '1.75rem', sm: '2.15rem', md: '2.4rem' },
-                fontWeight: 800,
+                fontWeight: 600,
                 color: '#0f172a',
                 letterSpacing: '-0.02em',
                 lineHeight: 1.2,
@@ -139,7 +139,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
                 },
               }}
             >
-              <Typography sx={{ fontWeight: 700, fontSize: '0.92rem' }}>
+              <Typography sx={{ fontWeight: 600, fontSize: '0.92rem' }}>
                 Explore Senior Directory
               </Typography>
               <ChevronRight className="senior-header-arrow" sx={{ fontSize: 18, transition: 'transform 0.2s ease' }} />
@@ -193,7 +193,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
                       sx={{
                         backgroundColor: 'rgba(183, 3, 2, 0.08)',
                         color: THEME_COLOR,
-                        fontWeight: 700,
+                        fontWeight: 600,
                         fontSize: '0.7rem',
                         height: 22,
                         mb: 0.5,
@@ -202,7 +202,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
                     <Typography
                       variant="h6"
                       sx={{
-                        fontWeight: 800,
+                        fontWeight: 600,
                         color: '#0f172a',
                         lineHeight: 1.25,
                         fontSize: '1rem',
@@ -247,7 +247,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
                 >
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     <Star sx={{ color: '#eab308', fontSize: 17 }} />
-                    <Typography variant="caption" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.82rem' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.82rem' }}>
                       {doc.rating}
                     </Typography>
                     <Typography variant="caption" sx={{ color: '#94a3b8', fontSize: '0.74rem' }}>
@@ -326,7 +326,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
                       backgroundColor: THEME_COLOR,
                       color: '#ffffff',
                       textTransform: 'none',
-                      fontWeight: 700,
+                      fontWeight: 600,
                       borderRadius: '9999px',
                       boxShadow: 'none',
                       '&:hover': {
@@ -380,7 +380,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
             >
               <Typography
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: '0.94rem',
                   lineHeight: 1.2,
                 }}
