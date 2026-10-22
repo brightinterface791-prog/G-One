@@ -73,6 +73,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onNavigate }) => 
               >
                 Schedule Appointment
               </Button>
+              <Button onClick={() => onNavigate('blog')} sx={{ justifyContent: 'flex-start', color: '#94a3b8', px: 0, '&:hover': { color: '#ffffff' } }}>Health Blog</Button>
               <Button
                 id="footer-doctors-link"
                 onClick={() => onNavigate('doctors')}
