@@ -80,8 +80,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       label: 'Specialties',
     },
     {
-      id: 'blog',
-      label: 'Blog',
+      id: 'newsroom',
+      label: 'Newsroom',
     },
   ];
 
