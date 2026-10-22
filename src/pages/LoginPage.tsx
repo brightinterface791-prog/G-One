@@ -334,7 +334,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
             <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 2.2 }}>
               <div className="space-y-1.5">
                 <label htmlFor="doctor-email-input" className="block text-sm font-medium text-slate-700">Email address</label>
-                <div className="flex h-11 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 transition-colors focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100">
+                <div className="flex h-14 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 transition-colors focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100">
                   <Email sx={{ color: '#64748b', fontSize: 19 }} aria-hidden="true" />
                   <input
                     id="doctor-email-input"
@@ -344,13 +344,13 @@ export const LoginPage: React.FC<LoginPageProps> = ({
                     placeholder="doctor@gonehealth.org"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="h-full min-w-0 flex-1 border-0 bg-transparent p-0 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                    className="gone-login-input h-full min-w-0 flex-1 border-0 bg-transparent p-0 text-[15px] text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
                   />
                 </div>
               </div>
               <div className="space-y-1.5">
                 <label htmlFor="doctor-password-input" className="block text-sm font-medium text-slate-700">Password</label>
-                <div className="flex h-11 items-center gap-3 rounded-full border border-slate-200 bg-white pl-4 pr-2 transition-colors focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100">
+                <div className="flex h-14 items-center gap-3 rounded-full border border-slate-200 bg-white pl-4 pr-2 transition-colors focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100">
                   <Lock sx={{ color: '#64748b', fontSize: 19 }} aria-hidden="true" />
                   <input
                     id="doctor-password-input"
@@ -360,7 +360,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
                     placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="h-full min-w-0 flex-1 border-0 bg-transparent p-0 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                    className="gone-login-input h-full min-w-0 flex-1 border-0 bg-transparent p-0 text-[15px] text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
                   />
                   <button
                     type="button"
