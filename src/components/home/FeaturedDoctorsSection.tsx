@@ -327,7 +327,7 @@ export const FeaturedDoctorsSection: React.FC<FeaturedDoctorsSectionProps> = ({
                       color: '#ffffff',
                       textTransform: 'none',
                       fontWeight: 700,
-                      borderRadius: '8px',
+                      borderRadius: '9999px',
                       boxShadow: 'none',
                       '&:hover': {
                         backgroundColor: '#950201',
