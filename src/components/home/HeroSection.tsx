@@ -116,60 +116,38 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               Book consultations with top medical specialists, monitor your daily vitals in real-time, and access certified clinical care with total peace of mind.
             </Typography>
 
-            {/* Quick Search Doctor Bar */}
-            <Paper
-              component="form"
-              onSubmit={handleSearchSubmit}
+            {/* Tailwind search: a single compact field and a clearly separated action. */}
+            <form
               id="hero-doctor-search-form"
-              elevation={0}
-              sx={{
-                p: 0.8,
-                display: 'flex',
-                alignItems: 'center',
-                border: '2px solid #e2e8f0',
-                borderRadius: 3,
-                mb: 3.5,
-                maxWidth: { xs: '100%', sm: 650 },
-                '&:focus-within': {
-                  borderColor: THEME_COLOR,
-                  boxShadow: '0 0 0 3px rgba(183, 3, 2, 0.12)',
-                },
-              }}
+              onSubmit={handleSearchSubmit}
+              role="search"
+              className="mb-7 w-full max-w-[650px]"
             >
-              <TextField
-                fullWidth
-                placeholder="Search by doctor name, specialty, or condition (e.g., Cardiology)..."
-                value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
-                variant="standard"
-                slotProps={{
-                  input: {
-                    disableUnderline: true,
-                    startAdornment: (
-                      <InputAdornment position="start" sx={{ pl: 1.5, color: '#64748b' }}>
-                        <Search />
-                      </InputAdornment>
-                    ),
-                  },
-                }}
-                sx={{ ml: 1 }}
-              />
-              <Button
-                id="hero-search-submit-btn"
-                type="submit"
-                variant="contained"
-                color="primary"
-                sx={{
-                  px: 3,
-                  py: 1.2,
-                  fontWeight: 700,
-                  whiteSpace: 'nowrap',
-                  borderRadius: 2,
-                }}
-              >
-                Find Doctor
-              </Button>
-            </Paper>
+              <label htmlFor="hero-doctor-search" className="mb-2 block text-[13px] font-medium text-slate-700">
+                Search doctor
+              </label>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-stretch">
+                <div className="flex min-h-11 min-w-0 flex-1 items-center gap-2.5 rounded-lg border border-slate-300 bg-white px-3.5 shadow-sm transition-colors focus-within:border-slate-500 focus-within:ring-2 focus-within:ring-slate-200">
+                  <Search size={18} aria-hidden="true" className="shrink-0 text-slate-400" />
+                  <input
+                    id="hero-doctor-search"
+                    type="search"
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                    placeholder="Doctor name, specialty or condition"
+                    autoComplete="off"
+                    className="h-11 min-w-0 w-full flex-1 border-0 bg-transparent p-0 text-sm font-normal text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                  />
+                </div>
+                <button
+                  id="hero-search-submit-btn"
+                  type="submit"
+                  className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg bg-[#b70302] px-5 text-sm font-medium text-white transition-colors hover:bg-[#900201] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b70302]"
+                >
+                  Find Doctor
+                </button>
+              </div>
+            </form>
 
             {/* Primary Action Buttons */}
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 4 }}>
