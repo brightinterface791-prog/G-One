@@ -3,8 +3,8 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 // Theme Primary color specified by user: #b70302
 export const THEME_COLOR = '#b70302';
 
-const FONT_DISPLAY = '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
-const FONT_TEXT = '"Inter", "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+const FONT_DISPLAY = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Segoe UI", Arial, sans-serif';
+const FONT_TEXT = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "Segoe UI", Arial, sans-serif';
 
 let theme = createTheme({
   palette: {
