@@ -549,108 +549,58 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
           )}
         </Paper>
 
-        {/* 4. Filter & Search Controls */}
-        <Paper elevation={0} sx={{ p: 2, mb: 3, borderRadius: 3, border: '1px solid #e2e8f0', backgroundColor: '#ffffff' }}>
-          <Grid container spacing={1.5} sx={{ alignItems: 'center' }}>
-            {/* Search */}
-            <Grid size={{ xs: 12, md: 4 }}>
-              <TextField
-                fullWidth
-                size="small"
+        {/* 4. Filter & Search Controls — Tailwind pill controls, aligned on one row at desktop widths */}
+        <div className="mb-6 rounded-2xl border border-slate-200 bg-white p-4">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+            <div className="relative min-w-0 flex-1 lg:flex-[2]">
+              <Search aria-hidden="true" sx={{ fontSize: 19 }} className="pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-slate-500" />
+              <input
+                type="search"
+                aria-label="Search appointments"
                 placeholder="Search patient, doctor, booking token, symptoms..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                slotProps={{
-                  input: {
-                    startAdornment: <Search sx={{ color: '#64748b', fontSize: 18, mr: 1 }} />,
-                  },
-                }}
+                className="h-11 w-full rounded-full border border-slate-200 bg-white py-2 pl-11 pr-4 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
               />
-            </Grid>
-
-            {/* Date filter */}
-            <Grid size={{ xs: 6, sm: 3, md: 2.5 }}>
-              <FormControl fullWidth size="small">
-                <InputLabel id="date-filter-label">Date</InputLabel>
-                <Select
-                  labelId="date-filter-label"
-                  value={dateFilter}
-                  label="Date"
-                  onChange={(e) => setDateFilter(e.target.value as any)}
-                >
-                  <MenuItem value="all">All Dates</MenuItem>
-                  <MenuItem value="today">Today (Sep 6)</MenuItem>
-                  <MenuItem value="upcoming">Upcoming</MenuItem>
-                  <MenuItem value="past">Past Consultations</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-
-            {/* Modality filter */}
-            <Grid size={{ xs: 6, sm: 3, md: 2.5 }}>
-              <FormControl fullWidth size="small">
-                <InputLabel id="modality-filter-label">Modality</InputLabel>
-                <Select
-                  labelId="modality-filter-label"
-                  value={modalityFilter}
-                  label="Modality"
-                  onChange={(e) => setModalityFilter(e.target.value)}
-                >
-                  <MenuItem value="All">All Modalities</MenuItem>
-                  <MenuItem value="In-Person OPD">In-Person OPD</MenuItem>
-                  <MenuItem value="Follow-up Consultation">Follow-up Consultation</MenuItem>
-                  <MenuItem value="Diagnostic Assessment">Diagnostic Assessment</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-
-            {/* View Mode & Export */}
-            <Grid size={{ xs: 12, sm: 6, md: 3 }} sx={{ display: 'flex', justifyContent: { xs: 'flex-start', md: 'flex-end' }, gap: 1 }}>
-              <Box sx={{ border: '1px solid #cbd5e1', borderRadius: '9999px', p: 0.3, display: 'inline-flex', backgroundColor: '#f8fafc' }}>
-                <IconButton
-                  size="small"
-                  onClick={() => setViewMode('cards')}
-                  sx={{
-                    backgroundColor: viewMode === 'cards' ? '#ffffff' : 'transparent',
-                    boxShadow: viewMode === 'cards' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                    borderRadius: '9999px',
-                    p: 0.6,
-                  }}
-                >
-                  <ViewAgenda sx={{ fontSize: 16, color: viewMode === 'cards' ? THEME_COLOR : '#64748b' }} />
-                </IconButton>
-                <IconButton
-                  size="small"
-                  onClick={() => setViewMode('table')}
-                  sx={{
-                    backgroundColor: viewMode === 'table' ? '#ffffff' : 'transparent',
-                    boxShadow: viewMode === 'table' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                    borderRadius: '9999px',
-                    p: 0.6,
-                  }}
-                >
-                  <TableRows sx={{ fontSize: 16, color: viewMode === 'table' ? THEME_COLOR : '#64748b' }} />
-                </IconButton>
-              </Box>
-
-              <Button
-                variant="outlined"
-                size="small"
-                startIcon={<Download sx={{ fontSize: 15 }} />}
-                onClick={handleExportSchedule}
-                sx={{
-                  textTransform: 'none',
-                  fontWeight: 700,
-                  fontSize: '0.76rem',
-                  borderRadius: '9999px',
-                  borderColor: '#cbd5e1',
-                  color: '#475569',
-                }}
+            </div>
+            <div className="grid min-w-0 grid-cols-2 gap-3 sm:grid-cols-2 lg:flex-[2]">
+              <select
+                aria-label="Filter appointments by date"
+                value={dateFilter}
+                onChange={(e) => setDateFilter(e.target.value as typeof dateFilter)}
+                className="h-11 min-w-0 w-full rounded-full border border-slate-200 bg-white px-4 text-sm text-slate-800 outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
               >
-                Export CSV
-              </Button>
-            </Grid>
-          </Grid>
+                <option value="all">All Dates</option>
+                <option value="today">Today (Sep 6)</option>
+                <option value="upcoming">Upcoming</option>
+                <option value="past">Past Consultations</option>
+              </select>
+              <select
+                aria-label="Filter appointments by modality"
+                value={modalityFilter}
+                onChange={(e) => setModalityFilter(e.target.value)}
+                className="h-11 min-w-0 w-full rounded-full border border-slate-200 bg-white px-4 text-sm text-slate-800 outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+              >
+                <option value="All">All Modalities</option>
+                <option value="In-Person OPD">In-Person OPD</option>
+                <option value="Follow-up Consultation">Follow-up Consultation</option>
+                <option value="Diagnostic Assessment">Diagnostic Assessment</option>
+              </select>
+            </div>
+            <div className="flex shrink-0 items-center justify-end gap-2">
+              <div className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 p-1">
+                <button type="button" aria-label="Card view" aria-pressed={viewMode === 'cards'} onClick={() => setViewMode('cards')} className={`flex h-8 w-8 items-center justify-center rounded-full ${viewMode === 'cards' ? 'bg-white text-[#b70302] shadow-sm' : 'text-slate-500'}`}>
+                  <ViewAgenda sx={{ fontSize: 18 }} />
+                </button>
+                <button type="button" aria-label="Table view" aria-pressed={viewMode === 'table'} onClick={() => setViewMode('table')} className={`flex h-8 w-8 items-center justify-center rounded-full ${viewMode === 'table' ? 'bg-white text-[#b70302] shadow-sm' : 'text-slate-500'}`}>
+                  <TableRows sx={{ fontSize: 18 }} />
+                </button>
+              </div>
+              <button type="button" onClick={handleExportSchedule} className="inline-flex h-10 items-center gap-2 whitespace-nowrap rounded-full border border-slate-300 bg-white px-4 text-sm font-medium text-slate-600 hover:bg-slate-50">
+                <Download sx={{ fontSize: 17 }} /> Export CSV
+              </button>
+            </div>
+          </div>
 
           {/* Status Tabs */}
           <Box sx={{ mt: 2, pt: 1.5, borderTop: '1px solid #f1f5f9' }}>
