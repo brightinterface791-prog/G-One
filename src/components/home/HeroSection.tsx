@@ -119,8 +119,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Compact responsive doctor search */}
             <form id="hero-doctor-search-form" role="search" onSubmit={handleSearchSubmit} className="mb-5 w-full max-w-[650px]">
-              <div className="flex flex-col gap-2 rounded-[28px] border border-slate-200 bg-white p-1.5 shadow-[0_6px_24px_rgba(15,23,42,0.06)] transition focus-within:border-slate-300 focus-within:ring-2 focus-within:ring-slate-100 sm:flex-row sm:items-center">
-                <div className="flex min-w-0 flex-1 items-center gap-2.5 px-2.5">
+              <div className="flex flex-col gap-2 rounded-full border border-slate-200 bg-white p-1.5 shadow-[0_6px_24px_rgba(15,23,42,0.06)] transition focus-within:border-slate-300 focus-within:ring-2 focus-within:ring-slate-100 sm:flex-row sm:items-center">
+                <div className="flex min-w-0 flex-1 items-center gap-2.5 rounded-full px-3.5">
                   <SearchIcon size={19} strokeWidth={1.8} aria-hidden="true" className="shrink-0 text-slate-400" />
                   <input
                     id="hero-doctor-search"
@@ -130,7 +130,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     onChange={(e) => setSearchValue(e.target.value)}
                     placeholder="Name, specialty or condition"
                     autoComplete="off"
-                    className="h-10 w-full min-w-0 flex-1 border-0 bg-transparent p-0 text-sm font-normal text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                    className="h-10 w-full min-w-0 flex-1 rounded-full border-0 bg-transparent p-0 text-sm font-normal text-slate-800 outline-none placeholder:text-slate-400 focus:outline-none focus:ring-0"
                   />
                 </div>
                 <button id="hero-search-submit-btn" type="submit" className="inline-flex h-10 w-full shrink-0 items-center justify-center gap-2 rounded-full bg-[#b70302] px-5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#970201] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b70302] sm:w-auto">
