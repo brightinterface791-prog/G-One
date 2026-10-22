@@ -312,75 +312,44 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
           )}
         </Box>
 
-        {/* Filter Controls Bar */}
-        <Paper
-          elevation={0}
-          sx={{
-            p: 2,
-            mb: 3.5,
-            borderRadius: 3,
-            border: '1px solid #e2e8f0',
-            backgroundColor: '#ffffff',
-          }}
-        >
-          <Grid container spacing={2} sx={{ alignItems: 'end' }}>
-            {/* Search Input */}
-            <Grid size={{ xs: 12, md: 5 }}>
-              <Typography component="label" sx={{ display: 'block', height: 20, mb: 0.75, fontSize: 13, fontWeight: 500, color: 'transparent' }} aria-hidden="true">Search</Typography>
-              <TextField
-                fullWidth
-                size="small"
+        {/* Consistent Tailwind doctor directory filters */}
+        <div className="mb-7 rounded-2xl border border-slate-200 bg-white p-4">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center">
+            <div className="relative min-w-0 flex-1 md:flex-[1.5]">
+              <Search sx={{ fontSize: 19 }} className="pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-slate-500" />
+              <input
+                type="search"
+                aria-label="Search doctors"
                 placeholder="Search doctor by name, specialty, or OPD chamber..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                slotProps={{
-                  input: {
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <Search sx={{ color: '#64748b', fontSize: 20 }} />
-                      </InputAdornment>
-                    ),
-                  },
-                }}
-                sx={{ '& .MuiOutlinedInput-root': { height: 46, borderRadius: 2, boxShadow: 'none', '& fieldset': { borderWidth: '1px !important', borderColor: '#e2e8f0' }, '&:hover fieldset': { borderColor: '#94a3b8' }, '&.Mui-focused fieldset': { borderColor: '#64748b' } } }}
+                className="h-11 w-full rounded-full border border-slate-200 bg-white py-2 pl-11 pr-4 text-sm text-slate-800 outline-none placeholder:text-slate-400 focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
               />
-            </Grid>
-
-            {/* Specialty Dropdown */}
-            <Grid size={{ xs: 12, sm: 6, md: 3.5 }}>
-              <Typography component="label" htmlFor="specialty-filter" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#64748b' }}>Specialty</Typography>
-              <FormControl fullWidth size="small" sx={{ '& .MuiOutlinedInput-root': { height: 46, borderRadius: 2, boxShadow: 'none', '& fieldset': { borderWidth: '1px !important', borderColor: '#e2e8f0' }, '&:hover fieldset': { borderColor: '#94a3b8' }, '&.Mui-focused fieldset': { borderColor: '#64748b' } } }}>
-                <Select
-                  id="specialty-filter"
-                  value={selectedSpecialty}
-                  onChange={(e) => onSelectSpecialty(e.target.value)}
-                >
-                  <MenuItem value="All">All Specialties ({doctors.length} Doctors)</MenuItem>
-                  {specialties.map((spec) => (
-                    <MenuItem key={spec.id} value={spec.title}>
-                      {spec.title}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </Grid>
-
-            {/* Sort Options */}
-            <Grid size={{ xs: 12, sm: 6, md: 3.5 }}>
-              <Typography component="label" htmlFor="sort-filter" sx={{ display: 'block', mb: 0.75, fontSize: 13, fontWeight: 500, color: '#64748b' }}>Sort By</Typography>
-              <FormControl fullWidth size="small" sx={{ '& .MuiOutlinedInput-root': { height: 46, borderRadius: 2, boxShadow: 'none', '& fieldset': { borderWidth: '1px !important', borderColor: '#e2e8f0' }, '&:hover fieldset': { borderColor: '#94a3b8' }, '&.Mui-focused fieldset': { borderColor: '#64748b' } } }}>
-                <Select
-                  id="sort-filter"
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
-                >
-                  <MenuItem value="rating">Highest Rated (★ 4.9+)</MenuItem>
-                  <MenuItem value="experience">Experience (Years)</MenuItem>
-                  <MenuItem value="fee">Consultation Fee</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-          </Grid>
+            </div>
+            <div className="relative min-w-0 flex-1">
+              <select
+                aria-label="Filter doctors by specialty"
+                value={selectedSpecialty}
+                onChange={(e) => onSelectSpecialty(e.target.value)}
+                className="h-11 w-full appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm text-slate-800 outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+              >
+                <option value="All">All Specialties ({doctors.length} Doctors)</option>
+                {specialties.map((spec) => <option key={spec.id} value={spec.title}>{spec.title}</option>)}
+              </select>
+            </div>
+            <div className="relative min-w-0 flex-1">
+              <select
+                aria-label="Sort doctors"
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
+                className="h-11 w-full appearance-none rounded-full border border-slate-200 bg-white py-2 pl-5 pr-12 text-sm text-slate-800 outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+              >
+                <option value="rating">Highest Rated (★ 4.9+)</option>
+                <option value="experience">Experience (Years)</option>
+                <option value="fee">Consultation Fee</option>
+              </select>
+            </div>
+          </div>
 
           {/* Quick Specialty Filter Chips */}
           <Box sx={{ mt: 1.5, pt: 1.5, borderTop: '1px solid #f1f5f9', display: 'flex', flexWrap: 'wrap', gap: 0.8 }}>
@@ -414,7 +383,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
               );
             })}
           </Box>
-        </Paper>
+        </div>
 
         {/* Results Bar */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2.5 }}>
