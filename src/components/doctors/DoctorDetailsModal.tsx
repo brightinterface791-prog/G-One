@@ -57,7 +57,7 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
       }}
     >
       <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pb: 1 }}>
-        <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a' }}>
+        <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a' }}>
           Doctor Medical Profile
         </Typography>
         <IconButton onClick={onClose} aria-label="close modal">
@@ -86,9 +86,9 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
               <Chip
                 label={doctor.specialty}
                 color="primary"
-                sx={{ fontWeight: 700, mb: 1 }}
+                sx={{ fontWeight: 600, mb: 1 }}
               />
-              <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', lineHeight: 1.2 }}>
+              <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', lineHeight: 1.2 }}>
                 {doctor.name}
               </Typography>
               <Typography variant="caption" sx={{ color: '#64748b', display: 'block', mb: 1.5 }}>
@@ -97,7 +97,7 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
 
               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0.5, mb: 2 }}>
                 <Rating value={doctor.rating} precision={0.1} readOnly size="small" />
-                <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a' }}>
+                <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a' }}>
                   {doctor.rating}
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#64748b' }}>
@@ -109,7 +109,7 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
                 <Typography variant="caption" sx={{ color: '#64748b', display: 'block' }}>
                   Consultation Fee
                 </Typography>
-                <Typography variant="h5" sx={{ fontWeight: 800, color: THEME_COLOR }}>
+                <Typography variant="h5" sx={{ fontWeight: 600, color: THEME_COLOR }}>
                   ${doctor.consultationFee}
                 </Typography>
               </Paper>
@@ -118,7 +118,7 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
 
           {/* Right Column: Bio, Qualifications, Schedule */}
           <Grid size={{ xs: 12, sm: 8 }}>
-            <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#0f172a', mb: 1 }}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#0f172a', mb: 1 }}>
               About Doctor
             </Typography>
             <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.7, mb: 3 }}>
@@ -184,7 +184,7 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
             </Grid>
 
             {/* Weekly Schedule */}
-            <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#0f172a', mb: 1.5 }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
               Available Consultation Days
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 3 }}>
@@ -194,7 +194,7 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
             </Box>
 
             {/* Slots */}
-            <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#0f172a', mb: 1.5 }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 1.5 }}>
               Daily OPD Time Slots
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
@@ -204,7 +204,7 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
                   label={slot}
                   icon={<Schedule sx={{ fontSize: 16 }} />}
                   size="small"
-                  sx={{ backgroundColor: 'rgba(183, 3, 2, 0.05)', color: THEME_COLOR, fontWeight: 700 }}
+                  sx={{ backgroundColor: 'rgba(183, 3, 2, 0.05)', color: THEME_COLOR, fontWeight: 600 }}
                 />
               ))}
             </Box>
@@ -225,7 +225,7 @@ export const DoctorDetailsModal: React.FC<DoctorDetailsModalProps> = ({
             onClose();
             onBookAppointment(doctor);
           }}
-          sx={{ fontWeight: 700, px: 3 }}
+          sx={{ fontWeight: 600, px: 3 }}
         >
           Book Consultation with {doctor.name}
         </Button>
