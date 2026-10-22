@@ -345,3 +345,23 @@ input.gone-login-input:autofill {
 .MuiTypography-root[style*="font-weight: 900"],
 .MuiTypography-root[style*="font-weight: 800"] { font-weight: 600 !important; }
 .font-black, .font-extrabold { font-weight: 600 !important; }
+
+/* Newsroom editorial cards only: override the app-wide pill button rule.
+   This is intentionally scoped so dashboard and other pages keep their styles. */
+.gone-newsroom button.group,
+.gone-newsroom button.group:hover,
+.gone-newsroom button.group:focus-visible {
+  border-radius: 4px !important;
+}
+.gone-newsroom button.group > img {
+  border-radius: 0 !important;
+}
+.gone-newsroom nav[aria-label="Newsroom categories"] button {
+  border-radius: 4px !important;
+}
+.gone-newsroom input[type="search"] {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
