@@ -274,7 +274,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                 label="HOSPITAL OPD OPERATIONAL"
                 size="small"
                 sx={{
-                  fontWeight: 800,
+                  fontWeight: 600,
                   backgroundColor: 'rgba(22, 163, 74, 0.1)',
                   color: '#15803d',
                   borderRadius: '9999px',
@@ -289,10 +289,10 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
             <Typography
               variant="h4"
               sx={{
-                fontWeight: 900,
+                fontWeight: 650,
                 color: '#0f172a',
                 fontSize: { xs: '1.5rem', sm: '1.85rem' },
-                letterSpacing: '-0.025em',
+                letterSpacing: '-0.018em',
                 lineHeight: 1.2,
                 mb: 0.5,
               }}
@@ -357,12 +357,12 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
           <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
             <Paper elevation={0} sx={{ p: 2.2, borderRadius: 3, border: '1px solid #e2e8f0', backgroundColor: '#ffffff', height: '100%' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
-                <Typography variant="caption" sx={{ fontWeight: 800, color: '#64748b', textTransform: 'uppercase', fontSize: '0.7rem' }}>
+                <Typography variant="caption" sx={{ fontWeight: 600, color: '#64748b', textTransform: 'uppercase', fontSize: '0.7rem' }}>
                   Today's OPD Consultations
                 </Typography>
                 <Assignment sx={{ color: THEME_COLOR, fontSize: 18 }} />
               </Box>
-              <Typography variant="h5" sx={{ fontWeight: 900, color: '#0f172a', fontSize: '1.45rem', mb: 0.3 }}>
+              <Typography variant="h5" sx={{ fontWeight: 650, color: '#0f172a', fontSize: '1.45rem', mb: 0.3 }}>
                 {todayAppointments.length} Patients
               </Typography>
               <Typography variant="caption" sx={{ color: '#475569', fontSize: '0.75rem', display: 'block', mb: 1 }}>
@@ -376,12 +376,12 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
           <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
             <Paper elevation={0} sx={{ p: 2.2, borderRadius: 3, border: '1px solid #e2e8f0', backgroundColor: '#ffffff', height: '100%' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
-                <Typography variant="caption" sx={{ fontWeight: 800, color: '#64748b', textTransform: 'uppercase', fontSize: '0.7rem' }}>
+                <Typography variant="caption" sx={{ fontWeight: 600, color: '#64748b', textTransform: 'uppercase', fontSize: '0.7rem' }}>
                   Physicians on Sitting Duty
                 </Typography>
                 <MeetingRoom sx={{ color: '#0284c7', fontSize: 18 }} />
               </Box>
-              <Typography variant="h5" sx={{ fontWeight: 900, color: '#0f172a', fontSize: '1.45rem', mb: 0.3 }}>
+              <Typography variant="h5" sx={{ fontWeight: 650, color: '#0f172a', fontSize: '1.45rem', mb: 0.3 }}>
                 {doctors.length || 5} Active Doctors
               </Typography>
               <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>
@@ -394,12 +394,12 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
           <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
             <Paper elevation={0} sx={{ p: 2.2, borderRadius: 3, border: '1px solid #e2e8f0', backgroundColor: '#ffffff', height: '100%' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
-                <Typography variant="caption" sx={{ fontWeight: 800, color: '#64748b', textTransform: 'uppercase', fontSize: '0.7rem' }}>
+                <Typography variant="caption" sx={{ fontWeight: 600, color: '#64748b', textTransform: 'uppercase', fontSize: '0.7rem' }}>
                   Confirmed Hospital Bookings
                 </Typography>
                 <CalendarToday sx={{ color: '#16a34a', fontSize: 18 }} />
               </Box>
-              <Typography variant="h5" sx={{ fontWeight: 900, color: '#0f172a', fontSize: '1.45rem', mb: 0.3 }}>
+              <Typography variant="h5" sx={{ fontWeight: 650, color: '#0f172a', fontSize: '1.45rem', mb: 0.3 }}>
                 {upcomingCount} Total Upcoming
               </Typography>
               <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>
@@ -412,12 +412,12 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
           <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
             <Paper elevation={0} sx={{ p: 2.2, borderRadius: 3, border: '1px solid #e2e8f0', backgroundColor: '#ffffff', height: '100%' }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
-                <Typography variant="caption" sx={{ fontWeight: 800, color: '#64748b', textTransform: 'uppercase', fontSize: '0.7rem' }}>
+                <Typography variant="caption" sx={{ fontWeight: 600, color: '#64748b', textTransform: 'uppercase', fontSize: '0.7rem' }}>
                   Average Consultation Time
                 </Typography>
                 <AccessTime sx={{ color: '#d97706', fontSize: 18 }} />
               </Box>
-              <Typography variant="h5" sx={{ fontWeight: 900, color: '#0f172a', fontSize: '1.45rem', mb: 0.3 }}>
+              <Typography variant="h5" sx={{ fontWeight: 650, color: '#0f172a', fontSize: '1.45rem', mb: 0.3 }}>
                 20 Min / Slot
               </Typography>
               <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>
@@ -442,7 +442,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flex: 1, width: { xs: '100%', md: 'auto' } }}>
               <PersonSearch sx={{ color: THEME_COLOR, fontSize: 24 }} />
               <Box sx={{ flex: 1 }}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.9rem' }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.9rem' }}>
                   Doctor-Wise Appointments & Sitting Schedule View
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.78rem' }}>
@@ -502,7 +502,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                 <Avatar src={activeFilteredDoctor.avatar} alt={activeFilteredDoctor.name} sx={{ width: 54, height: 54, borderRadius: 2 }} />
                 <Box>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.95rem' }}>
+                    <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.95rem' }}>
                       {activeFilteredDoctor.name}
                     </Typography>
                     <Chip label={activeFilteredDoctor.specialty} size="small" sx={{ height: 20, fontSize: '0.68rem', fontWeight: 700, backgroundColor: 'rgba(183, 3, 2, 0.08)', color: THEME_COLOR }} />
@@ -522,7 +522,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                   <Typography variant="caption" sx={{ color: '#64748b', fontSize: '0.68rem', fontWeight: 700, textTransform: 'uppercase' }}>
                     Total Doctor Queue
                   </Typography>
-                  <Typography variant="h6" sx={{ fontWeight: 900, color: THEME_COLOR, lineHeight: 1.1 }}>
+                  <Typography variant="h6" sx={{ fontWeight: 650, color: THEME_COLOR, lineHeight: 1.1 }}>
                     {doctorTodayApts.length}
                   </Typography>
                 </Paper>
@@ -642,7 +642,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
         {filteredAppointments.length === 0 ? (
           <Paper sx={{ p: 6, textAlign: 'center', borderRadius: 3, border: '1px dashed #cbd5e1', backgroundColor: '#ffffff' }}>
             <CalendarToday sx={{ fontSize: 40, color: '#94a3b8', mb: 1.5 }} />
-            <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5, fontSize: '1rem' }}>
+            <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5, fontSize: '1rem' }}>
               No Consultations Found
             </Typography>
             <Typography variant="body2" sx={{ color: '#64748b', mb: 2, fontSize: '0.82rem' }}>
@@ -698,7 +698,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                           variant="caption"
                           sx={{
                             fontFamily: 'monospace',
-                            fontWeight: 800,
+                            fontWeight: 600,
                             color: THEME_COLOR,
                             fontSize: '0.74rem',
                             letterSpacing: '0.02em',
@@ -731,7 +731,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                             color: '#166534',
                             border: '1px solid #bbf7d0',
                             fontSize: '0.64rem',
-                            fontWeight: 800,
+                            fontWeight: 600,
                             textTransform: 'uppercase',
                             letterSpacing: '0.02em',
                           }}
@@ -753,7 +753,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                             color: '#047857',
                             border: '1px solid #a7f3d0',
                             fontSize: '0.64rem',
-                            fontWeight: 800,
+                            fontWeight: 600,
                             textTransform: 'uppercase',
                             letterSpacing: '0.02em',
                           }}
@@ -775,7 +775,7 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                             color: '#b91c1c',
                             border: '1px solid #fecaca',
                             fontSize: '0.64rem',
-                            fontWeight: 800,
+                            fontWeight: 600,
                             textTransform: 'uppercase',
                             letterSpacing: '0.02em',
                           }}
@@ -795,14 +795,14 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
                           borderRadius: 1.5,
                           backgroundColor: 'rgba(183, 3, 2, 0.08)',
                           color: THEME_COLOR,
-                          fontWeight: 800,
+                          fontWeight: 600,
                           fontSize: '0.82rem',
                         }}
                       >
                         {apt.patientName.charAt(0)}
                       </Avatar>
                       <Box sx={{ flex: 1, minWidth: 0 }}>
-                        <Typography variant="subtitle2" noWrap sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.88rem', lineHeight: 1.2 }}>
+                        <Typography variant="subtitle2" noWrap sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.88rem', lineHeight: 1.2 }}>
                           {apt.patientName}
                         </Typography>
                         <Typography variant="caption" noWrap sx={{ color: '#64748b', display: 'block', fontSize: '0.72rem', mt: 0.2 }}>
@@ -1025,12 +1025,12 @@ export const AppointmentsPage: React.FC<AppointmentsPageProps> = ({
             <Table size="small">
               <TableHead sx={{ backgroundColor: '#f8fafc' }}>
                 <TableRow>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.76rem', color: '#475569' }}>Ref Token</TableCell>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.76rem', color: '#475569' }}>Patient</TableCell>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.76rem', color: '#475569' }}>Attending Physician</TableCell>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.76rem', color: '#475569' }}>Schedule & Room</TableCell>
-                  <TableCell sx={{ fontWeight: 800, fontSize: '0.76rem', color: '#475569' }}>Status</TableCell>
-                  <TableCell align="right" sx={{ fontWeight: 800, fontSize: '0.76rem', color: '#475569' }}>Clinical Actions</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.76rem', color: '#475569' }}>Ref Token</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.76rem', color: '#475569' }}>Patient</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.76rem', color: '#475569' }}>Attending Physician</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.76rem', color: '#475569' }}>Schedule & Room</TableCell>
+                  <TableCell sx={{ fontWeight: 600, fontSize: '0.76rem', color: '#475569' }}>Status</TableCell>
+                  <TableCell align="right" sx={{ fontWeight: 600, fontSize: '0.76rem', color: '#475569' }}>Clinical Actions</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
