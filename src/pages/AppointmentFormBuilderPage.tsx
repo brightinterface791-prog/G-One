@@ -193,7 +193,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                 sx={{
                   backgroundColor: 'rgba(183, 3, 2, 0.08)',
                   color: THEME_COLOR,
-                  fontWeight: 800,
+                  fontWeight: 600,
                   fontSize: '0.68rem',
                   borderRadius: '9999px',
                 }}
@@ -202,7 +202,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                 Dynamic Intake Engine
               </Typography>
             </Box>
-            <Typography variant="h4" sx={{ fontWeight: 900, color: '#0f172a', fontSize: { xs: '1.5rem', sm: '1.85rem' }, letterSpacing: '-0.02em' }}>
+            <Typography variant="h4" sx={{ fontWeight: 600, color: '#0f172a', fontSize: { xs: '1.5rem', sm: '1.85rem' }, letterSpacing: '-0.02em' }}>
               Dynamic Appointment Form Designer
             </Typography>
             <Typography variant="body2" sx={{ color: '#475569', fontSize: '0.86rem', maxWidth: 760 }}>
@@ -232,7 +232,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
               sx={{
                 borderRadius: '9999px',
                 textTransform: 'none',
-                fontWeight: 700,
+                fontWeight: 600,
                 fontSize: '0.8rem',
                 px: 2,
                 py: 0.6,
@@ -255,7 +255,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
               sx={{
                 borderRadius: '9999px',
                 textTransform: 'none',
-                fontWeight: 700,
+                fontWeight: 600,
                 fontSize: '0.8rem',
                 px: 2,
                 py: 0.6,
@@ -312,7 +312,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                 sx={{
                   backgroundColor: 'rgba(2, 132, 199, 0.1)',
                   color: '#0369a1',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: '0.72rem',
                 }}
               />
@@ -337,7 +337,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                 sx={{
                   fontSize: '0.75rem',
                   textTransform: 'none',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   borderRadius: '9999px',
                 }}
               >
@@ -361,7 +361,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
             >
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2.5 }}>
                 <Box>
-                  <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '1.05rem' }}>
+                  <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '1.05rem' }}>
                     {formConfig.mode === 'global' ? 'Global Appointment Questions' : `Specific Questions: ${activeDoctor.name}`}
                   </Typography>
                   <Typography variant="caption" sx={{ color: '#64748b' }}>
@@ -378,7 +378,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                   sx={{
                     backgroundColor: THEME_COLOR,
                     textTransform: 'none',
-                    fontWeight: 700,
+                    fontWeight: 600,
                     borderRadius: '9999px',
                     fontSize: '0.82rem',
                     px: 2,
@@ -401,7 +401,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                   }}
                 >
                   <DynamicForm sx={{ fontSize: 40, color: '#94a3b8', mb: 1 }} />
-                  <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#0f172a', mb: 0.5 }}>
                     No Custom Fields Configured
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#64748b', fontSize: '0.82rem', mb: 2 }}>
@@ -414,7 +414,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                     size="small"
                     startIcon={<AddCircleOutlined />}
                     onClick={handleOpenAddModal}
-                    sx={{ textTransform: 'none', fontWeight: 700, borderRadius: '9999px', borderColor: THEME_COLOR, color: THEME_COLOR }}
+                    sx={{ textTransform: 'none', fontWeight: 600, borderRadius: '9999px', borderColor: THEME_COLOR, color: THEME_COLOR }}
                   >
                     Add First Field
                   </Button>
@@ -458,18 +458,18 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
 
                           <Box sx={{ flex: 1 }}>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap', mb: 0.3 }}>
-                              <Typography variant="body2" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '0.88rem' }}>
+                              <Typography variant="body2" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '0.88rem' }}>
                                 {idx + 1}. {field.label}
                               </Typography>
                               {field.required ? (
-                                <Chip label="Required" size="small" sx={{ height: 20, fontSize: '0.65rem', fontWeight: 800, backgroundColor: '#fee2e2', color: '#dc2626' }} />
+                                <Chip label="Required" size="small" sx={{ height: 20, fontSize: '0.65rem', fontWeight: 600, backgroundColor: '#fee2e2', color: '#dc2626' }} />
                               ) : (
                                 <Chip label="Optional" size="small" sx={{ height: 20, fontSize: '0.65rem', fontWeight: 600, backgroundColor: '#e2e8f0', color: '#475569' }} />
                               )}
                               <Chip
                                 label={field.type.toUpperCase()}
                                 size="small"
-                                sx={{ height: 20, fontSize: '0.62rem', fontWeight: 700, backgroundColor: '#f1f5f9', color: '#334155' }}
+                                sx={{ height: 20, fontSize: '0.62rem', fontWeight: 600, backgroundColor: '#f1f5f9', color: '#334155' }}
                               />
                             </Box>
 
@@ -531,7 +531,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
             >
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
                 <Preview sx={{ color: THEME_COLOR, fontSize: 20 }} />
-                <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', fontSize: '1rem' }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#0f172a', fontSize: '1rem' }}>
                   Live Patient Booking Preview
                 </Typography>
               </Box>
@@ -544,7 +544,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
 
               {/* Standard Fixed Patient Info Preview */}
               <Box sx={{ p: 1.5, backgroundColor: '#f8fafc', borderRadius: 2, mb: 2.5, border: '1px solid #e2e8f0' }}>
-                <Typography variant="caption" sx={{ fontWeight: 800, color: '#475569', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'block', mb: 1 }}>
+                <Typography variant="caption" sx={{ fontWeight: 600, color: '#475569', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'block', mb: 1 }}>
                   1. Base Patient Demographics (System Standard)
                 </Typography>
                 <Grid container spacing={1}>
@@ -558,7 +558,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
               </Box>
 
               {/* Dynamic Custom Fields Section */}
-              <Typography variant="caption" sx={{ fontWeight: 800, color: THEME_COLOR, textTransform: 'uppercase', letterSpacing: '0.04em', display: 'block', mb: 1.5 }}>
+              <Typography variant="caption" sx={{ fontWeight: 600, color: THEME_COLOR, textTransform: 'uppercase', letterSpacing: '0.04em', display: 'block', mb: 1.5 }}>
                 2. Dynamic Questions ({formConfig.mode === 'global' ? 'Global Hospital Form' : `Doctor-Specific: ${activeDoctor.name}`})
               </Typography>
 
@@ -633,7 +633,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
                       sx={{
                         backgroundColor: THEME_COLOR,
                         textTransform: 'none',
-                        fontWeight: 800,
+                        fontWeight: 600,
                         fontSize: '0.85rem',
                         borderRadius: '9999px',
                         py: 1,
@@ -745,7 +745,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.75 }}>
               <Typography sx={{ fontSize: '14px', fontWeight: 600, color: '#1e293b' }}>
                 Field Question / Clinical Prompt{' '}
-                <Box component="span" sx={{ color: THEME_COLOR, fontWeight: 700 }}>
+                <Box component="span" sx={{ color: THEME_COLOR, fontWeight: 600 }}>
                   *
                 </Box>
               </Typography>
@@ -857,7 +857,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.75 }}>
                 <Typography sx={{ fontSize: '14px', fontWeight: 600, color: '#1e293b' }}>
                   Options List (Comma-separated){' '}
-                  <Box component="span" sx={{ color: THEME_COLOR, fontWeight: 700 }}>
+                  <Box component="span" sx={{ color: THEME_COLOR, fontWeight: 600 }}>
                     *
                   </Box>
                 </Typography>
@@ -941,7 +941,7 @@ export const AppointmentFormBuilderPage: React.FC<AppointmentFormBuilderPageProp
               <Typography
                 sx={{
                   fontSize: '11px',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   color: '#475569',
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em',
